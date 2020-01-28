@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <header class="">
+    <header class="page-header">
         <a><img src="https://via.placeholder.com/150x100" alt="" width="" height=""></a>
         <!-- Тут потом необходимо вставить форму поиска - (Иконка лупы) -->
         <ul>
@@ -15,27 +15,29 @@
           <li><a href="#">Корзина</a></li>
         </ul>
         
-        <ul>
-          <li>
-            <h2><a href="catalog.html">Каталог товаров</a></h2>
-            <ul>
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
-            </ul>
-          </li>
-          <li><h2><a href="#">Доставка</h2></a></li>
-          <li><h2><a href="#">Гарантия</h2></a></li>
-          <li><h2><a href="#">Контакты</h2></a></li>
-        </ul>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="catalog.html" class="anchor-link">Каталог товаров</a>
+              <ul>
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Моноподы для селфи</a></li>
+                <li><a href="#">Экшн-камеры</a></li>
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Умные часы</a></li>
+                <li><a href="#">Квадрокоптеры</a></li>
+              </ul>
+            </li>
+            <li class="nav-list-item"><a href="#" class="anchor-link">Доставка</a></li>
+            <li class="nav-list-item"><a href="#" class="anchor-link">Гарантия</a></li>
+            <li class="nav-list-item"><a href="#" class="anchor-link">Контакты</a></li>
+          </ul>
+        </nav>
     </header>
 
     <main>
       
-      <section class="">
+      <section class="promo-slider">
         <h1>HTML Academy: Девайс</h1>
         <!-- Тут будет слайдер с горячими предложениями -->
         <h2>Список разделов товаров</h2>
@@ -49,7 +51,7 @@
         </ul>
       </section>
 
-      <section class="">
+      <section class="advantages-list">
         <h2>Список преимуществ</h2>
         <ul>
           <li>Доставка</li>
@@ -64,7 +66,7 @@
         </p>
       </section>
 
-      <section class="">
+      <section class="partners-list">
         <h2>Наши партнеры</h2>
         <ul>
           <li><a href="#"><img src="https://via.placeholder.com/150x100" alt="DJI" width="" height=""></a></li>
@@ -74,8 +76,8 @@
         </ul>
       </section>
       
-      <section class="">
-        <div class="">
+      <section class="about-us-section">
+        <div class="about-us">
           <h2>О нас</h2>
           <p>
             Огромный выбор гаджетов не оставит равнодушным гика,
@@ -93,7 +95,7 @@
           <a href="#">Подробнее о нас</a>
         </div>
       
-        <div class="">
+        <div class="contacts">
           <h2>Контакты</h2>
           <p>
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
@@ -106,15 +108,15 @@
 
     </main>
 
-    <footer class="">
-      <div class=""><a>DEVICE</a></div>
+    <footer class="page-footer">
+      <div class="footer-logo"><a>DEVICE</a></div>
       <ul>
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
 
-      <div class=""><p>г. Москва, ул. Строителей, 15</p></div>
+      <div class="footer-address"><p>г. Москва, ул. Строителей, 15</p></div>
       <ul>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
