@@ -7,31 +7,33 @@
   <body>
 
     <header class="page-header">
-        <a href="index.html"><img src="https://via.placeholder.com/150x100" alt="" width="" height=""></a>
-        <!-- Тут потом необходимо вставить форму поиска - (Иконка лупы) -->
-        <ul>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+      <a href="index.html"><img src="img/logo-device.svg" alt="DEVICE" width="163" height="35"></a>
+      <img src="img/search.svg" alt="Поиск по сайту" width="16" height="16">
+      <!-- Тут потом необходимо вставить форму поиска - (Иконка лупы) -->
+      <ul>
+        <li><a href="#"><img src="img/user.svg" alt="Войти" width="13" height="12">Валентин Петухов</a></li>
+        <li><a href="#">Выйти</a></li>
+        <li><a href="#"><img src="img/compare.svg" alt="Сравнить по сайту" width="10" height="10">Сравнить</a></li>
+        <li><a href="#"><img src="img/cart.svg" alt="Корзина" width="12" height="12">Корзина</a></li>
+      </ul>
+        
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="catalog.html" class="anchor-link">Каталог товаров <img src="img/plus.svg" alt="Открыть каталог" width="16" height="16"></a>
+            <ul>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li class="nav-list-item"><a href="#" class="anchor-link">Доставка</a></li>
+          <li class="nav-list-item"><a href="#" class="anchor-link">Гарантия</a></li>
+          <li class="nav-list-item"><a href="#" class="anchor-link">Контакты</a></li>
         </ul>
-
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <a>Каталог товаров</a>
-              <ul>
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a>Моноподы для селфи</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
-              </ul>
-            </li>
-            <li class="nav-list-item"><a href="#" class="anchor-link">Доставка</a></li>
-            <li class="nav-list-item"><a href="#" class="anchor-link">Гарантия</a></li>
-            <li class="nav-list-item"><a href="#" class="anchor-link">Контакты</a></li>
-          </ul>
       </nav>
     </header>
 
@@ -39,8 +41,8 @@
 
       <h1>Моноподы для селфи</h1>
       <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
+        <li><a href="index.html">Главная</a> <img src="img/nav-arrow.svg" alt="стрелка" width="4" height="7"></li>
+        <li><a href="#">Каталог</a> <img src="img/nav-arrow.svg" alt="стрелка" width="4" height="7"></li>
         <li><a>Моноподы для селфи</a></li>
       </ul>
 
@@ -50,9 +52,18 @@
           <h3>Стоимость</h3>
           <!-- Форма для фильтра будет тут -->
           <h3>Цвет</h3>
-          <!-- Форма для фильтра будет тут -->
+          <ul>
+            <li><img src="img/checkbox-on.svg" alt="Пункт выбран" width="27" height="23">Черный</li>
+            <li><img src="img/checkbox-off.svg" alt="Пункт не выбран" width="23" height="23">Белый</li>
+            <li><img src="img/checkbox-on.svg" alt="Пункт выбран" width="27" height="23">Синий</li>
+            <li><img src="img/checkbox-on.svg" alt="Пункт выбран" width="27" height="23">Красный</li>
+            <li><img src="img/checkbox-off.svg" alt="Пункт не выбран" width="23" height="23">Розовый</li>
+          </ul>
           <h3>Bluetooth</h3>
-          <!-- Форма для фильтра будет тут -->
+          <ul>
+            <li><img src="img/radio-on.svg" alt="Пункт выбран" width="25" height="25">Есть</li>
+            <li><img src="img/radio-off.svg" alt="Пункт не выбран" width="25" height="25">Нет</li>
+          </ul>
           <button type="submit">Показать</button>
         </form>
       </aside>
@@ -74,28 +85,28 @@
         <ul>
           <li>
             <article class="catalog-item">
-              <img src="https://via.placeholder.com/300x300" alt="Любительская селфи-палка" width="" height="">
+              <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <h2><a href="#">Любительская селфи-палка</a></h2>
               <p>500 руб.</p>
             </article>
           </li>
           <li>
             <article class="catalog-item">
-              <img src="https://via.placeholder.com/300x300" alt="Профессиональная селфи-палка" width="" height="">
+              <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" width="" height="">
               <h2><a href="#">Профессиональная селфи-палка</a></h2>
               <p>1 500 руб.</p>
             </article>
           </li>
           <li>
             <article class="catalog-item">
-              <img src="https://via.placeholder.com/300x300" alt="Непотопляемая селфи-палка" width="" height="">
+              <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" width="" height="">
               <h2><a href="#">Непотопляемая селфи-палка</a></h2>
               <p>2 500 руб.</p>
             </article>
           </li>
           <li>
             <article class="catalog-item">
-              <img src="https://via.placeholder.com/300x300" alt="Селфи-палка "Следуй за мной"" width="" height="">
+              <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка "Следуй за мной"" width="" height="">
               <h2><a href="#">Селфи-палка "Следуй за мной"</a></h2>
               <p>4 900 руб.</p>
             </article>
@@ -116,11 +127,14 @@
     </main>
 
     <footer class="page-footer">
-      <div class="footer-logo"><a href="index.html">DEVICE</a></div>
+      <div class="footer-logo">
+        <a href="index.html"><img src="img/logo-device.svg" alt="DEVICE" width="163" height="35"></a>
+      </div>
       <ul>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+        <li><a href="#"><img src="img/user.svg" alt="Войти" width="13" height="12">Валентин Петухов</a></li>
+        <li><a href="#">Выйти</a></li>
+        <li><a href="#"><img src="img/compare.svg" alt="Сравнить по сайту" width="10" height="10">Сравнить</a></li>
+        <li><a href="#"><img src="img/cart.svg" alt="Корзина" width="12" height="12">Корзина</a></li>
       </ul>
 
       <div class="footer-address"><p>г. Москва, ул. Строителей, 15</p></div>
@@ -132,12 +146,12 @@
       <p><a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
 
       <ul>
-        <li><a href="#"><img src="https://via.placeholder.com/60x60" alt="Facebook" width="" height=""></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/60x60" alt="Instagram" width="" height=""></a></li>
-        <li><a href="#"><img src="https://via.placeholder.com/60x60" alt="Twitter" width="" height=""></a></li>
+        <li><a href="#"><img src="img/fb.svg" alt="Facebook" width="32" height="32"></a></li>
+        <li><a href="#"><img src="img/instagram.svg" alt="Instagram" width="32" height="32"></a></li>
+        <li><a href="#"><img src="img/twitter.svg" alt="Twitter" width="32" height="32"></a></li>
       </ul>
       
-      <div><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/60x80" alt="Twitter" width="" height=""></a></div>
+      <div><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" alt="HtmlAcademy" width="27" height="35"></a></div>
     </footer>
 
   </body>
