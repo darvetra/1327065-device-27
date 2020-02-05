@@ -1,4 +1,16 @@
 /* Стили */
+/* BODY */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 /* HEADER */
 .page-header {
 
@@ -38,8 +50,17 @@
 
 }
 
+/* Pop-up */
+.popup-enter {
+
+}
+
+.popup-map {
+    
+}
+
 /* index.html */
-.promo-slider {
+.slider {
 
 }
 

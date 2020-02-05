@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
@@ -55,7 +57,7 @@
                 <path fill="#272525" d="M16 7H9V0H7v7H0v2h7v7h2V9h7z"/>
               </svg>
             </a>
-            <ul>
+            <ul class="visually-hidden">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
@@ -81,22 +83,57 @@
       </ul>
 
       <aside class="filter-aside">
-        <form>
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
           <h3>Фильтр:</h3>
           <h3>Стоимость</h3>
           <!-- Форма для фильтра будет тут -->
           <h3>Цвет</h3>
           <ul>
-            <li>Черный</li>
-            <li>Белый</li>
-            <li>Синий</li>
-            <li>Красный</li>
-            <li>Розовый</li>
+            <li>
+              <label>
+                <input type="checkbox" name="black" value="" checked>
+                Черный
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="white" value="">
+                Белый
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="blue" value="" checked>
+                Синий
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="red" value="" checked>
+                Красный
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="pink" value="">
+                Розовый
+              </label>
+            </li>
           </ul>
           <h3>Bluetooth</h3>
           <ul>
-            <li>Есть</li>
-            <li>Нет</li>
+            <li>
+              <label>
+                <input type="radio" name="Bluetooth" value="yes" checked>
+                Есть
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="Bluetooth" value="no">
+                Нет
+              </label>
+            </li>
           </ul>
           <button type="submit">Показать</button>
         </form>
