@@ -61,7 +61,7 @@ body {
 
   background-color: #ffffff;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 2;
   color: #464646;
@@ -93,7 +93,7 @@ a {
   background-color: #f0c52e;
   border: 0;
 
-  font-family: Gilroy, open-sans;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -161,7 +161,7 @@ a {
 }
 
 .nav {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.33;
   color: #000000;
@@ -187,7 +187,7 @@ a {
 */
 
 .main-page h1 {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -197,7 +197,7 @@ a {
 }
 
 .breadcrumbs {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
@@ -257,7 +257,7 @@ a {
 }
 
 .footer-nav {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.33;
   color: #ffffff;
@@ -345,7 +345,7 @@ a {
 
 
 .about-us-section h2 {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -355,7 +355,7 @@ a {
 }
 
 .about-us-section ul {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
@@ -374,7 +374,7 @@ a {
 }
 
 .filter-aside h3{
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -388,7 +388,7 @@ a {
 }
 
 .filter-aside label {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 2.86;
@@ -406,7 +406,7 @@ a {
 }
 
 .catalog-item h2 {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -422,7 +422,7 @@ a {
 }
 
 .catalog-item p {
-  font-family: Gilroy, sans-serif;
+  font-family: Gilroy, Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
