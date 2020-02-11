@@ -114,7 +114,7 @@ a {
 
 /* HEADER */
 .page-header {
-  background-color: rgb(240, 197, 46, 0.5);;
+  background-color: rgb(240, 197, 46, 0.5); /* f0c52e в RGBA */ 
 }
 
 .page-header input[type="text"] {
@@ -152,12 +152,10 @@ a {
 .page-header a:hover,
 .page-header a:focus {
   color: rgba(0, 0, 0, 0.6);
-  opacity: 0.6;
 }
 
 .page-header a:active {
   color: rgba(0, 0, 0, 0.3);
-  opacity: 0.3;
 }
 
 .nav {
@@ -209,18 +207,15 @@ a {
 
 .breadcrumbs a {
   color: rgba(0, 0, 0, 0.3);
-  opacity: 0.3;
 }
 
 .breadcrumbs a:hover, 
 .breadcrumbs a:focus {
   color: rgba(0, 0, 0, 0.6);
-  opacity: 0.6;
 }
 
 .breadcrumbs a:active {
   color: rgba(0, 0, 0, 0.1);
-  opacity: 0.1;
 } 
 /* 
     FOOTER
@@ -240,12 +235,10 @@ a {
 .page-footer a:hover,
 .page-footer a:focus {
   color: rgba(255, 255, 255, 1);
-  opacity: 0.6;
 }
 
 .page-footer a:active {
   color: rgba(255, 255, 255, 0.3);
-  opacity: 0.3;
 }
 
 .footer-logo {
@@ -274,27 +267,22 @@ a {
 .footer-nav a:hover,
 .footer-nav a:focus {
   color: rgba(255, 255, 255, 0.6);
-  opacity: 0.6;
 }
 
 .footer-nav a:active {
   color: rgba(255, 255, 255, 0.3);
-  opacity: 0.3;
 }
 
 .socials a {
-  color: rgba(255, 255, 255, 0.3);
   opacity: 0.3;
 }
 
 .socials a:hover,
 .socials a:focus {
-  color: rgba(255, 255, 255, 0.6);
   opacity: 0.6;
 }
 
 .socials a:active {
-  color: rgba(255, 255, 255, 0.1);
   opacity: 0.1;
 }
 
@@ -327,12 +315,133 @@ a {
 
 }
 
-.advantages-list {
+.slider-info h2 {
+font-family: Gilroy, Arial, sans-serif;
+font-size: 47px;
+font-weight: 800;
+line-height: 1.19;
+letter-spacing: 0.47px;
+text-align: left;
+color: #000000;
+}
 
+.slider-info p {
+font-family: "Open Sans", Arial, sans-serif;
+font-size: 15px;
+font-weight: 300;
+line-height: 2;
+letter-spacing: 0.15px;
+text-align: left;
+color: #464646;
+}
+
+.slider-info dt {
+font-family: Gilroy, Arial, sans-serif;
+font-size: 36px;
+font-weight: 300;
+line-height: 1.33;
+letter-spacing: 0.36px;
+text-align: left;
+color: #000000;
+}
+
+.slider-info dd {
+font-family: "Open Sans", Arial, sans-serif;
+font-size: 13px;
+font-weight: 300;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.54;
+letter-spacing: 0.13px;
+text-align: left;
+color: #464646;
+}
+
+.items-list {
+  list-style-type: none;
+}
+
+.items-list a {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: #000000;
+
+  background-color: rgb(240, 197, 46, 0.5);
+}
+
+.items-list a:hover,
+.items-list a:focus {
+  background-color: rgb(240, 197, 46, 1);
+}
+
+.items-list a:active {
+  background-color: rgb(240, 197, 46, 1);
+}
+
+.items-list a:active svg {
+  opacity: 0.3;
+}
+
+.advantages-list {
+  background-color: #e5e5e5;
+}
+
+.advantages-list h3{
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+
+.advantages-list p{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #464646;
+}
+
+.advantages-list ul {
+  list-style-type: none;
+}
+
+.advantages-list label {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000;
+
+  background-color: #f0c52e;
+}
+
+.black-button:hover + label,
+.black-button:focus + label {
+
+}
+
+.black-button:active + label {
+  background-color: #000000;
+  color: #f7e184;
 }
 
 .partners-list {
 
+}
+
+.partners-list ul{
+  list-style-type: none;
 }
 
 .about-us-section {
@@ -373,7 +482,22 @@ a {
  background-color: #ebebeb;
 }
 
-.filter-aside h3{
+.filter-aside h3 {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.filter-aside fieldset {
+  border: none;
+}
+
+.filter-aside legend {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -401,9 +525,70 @@ a {
 .filter-aside label:focus {
   opacity: 0.6;
 }
+
 .sort-catalog {
 
 }
+
+.sort-catalog h3{
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.page-catalog ul {
+  list-style-type: none;
+}
+
+.sort-catalog ul:first-of-type a {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-catalog ul:first-of-type a:hover,
+.sort-catalog ul:first-of-type a:focus {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-catalog ul:first-of-type a:active {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.sort-catalog ul:last-of-type a {
+  opacity: 0.2;
+}
+
+.sort-catalog ul:last-of-type a:hover,
+.sort-catalog ul:last-of-type a:focus {
+  opacity: 0.4;
+}
+
+.sort-catalog ul:last-of-type a:active {
+  opacity: 1;
+}
+
 
 .catalog-item h2 {
   font-family: Gilroy, Arial, sans-serif;
@@ -453,4 +638,59 @@ a {
 
 .range-slider-pin-max {
   
+}
+
+.pagination ul{
+  list-style-type: none;
+  background-color: #ebebeb;
+}
+
+.pagination a {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination a:active {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: #000000;
+}
+
+.pagination li:first-child a,
+.pagination li:last-child a {
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination li:first-child a:hover,
+.pagination li:last-child a:hover,
+.pagination li:first-child a:focus,
+.pagination li:last-child a:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination li:first-child a:active,
+.pagination li:last-child a:active {
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
 }
