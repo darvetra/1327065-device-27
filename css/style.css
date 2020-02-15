@@ -361,7 +361,7 @@ color: #464646;
   list-style-type: none;
 }
 
-.items-list a {
+.product-section {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -373,16 +373,16 @@ color: #464646;
   background-color: rgb(240, 197, 46, 0.5);
 }
 
-.items-list a:hover,
-.items-list a:focus {
+.product-section:hover,
+.product-section:focus {
   background-color: rgb(240, 197, 46, 1);
 }
 
-.items-list a:active {
+.product-section:active {
   background-color: rgb(240, 197, 46, 1);
 }
 
-.items-list a:active svg {
+.product-section:active svg {
   opacity: 0.3;
 }
 
