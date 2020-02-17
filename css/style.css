@@ -101,6 +101,8 @@ a {
   text-align: center;
   color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
+  display: inline;
+  max-width: 220px;
 }
 
 .yellow-button:hover,
@@ -434,15 +436,24 @@ margin: 0 20px;
 */
 
 .slider {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
 
 }
 
 .slider-item {
+  display: flex;
+  flex-direction: row;
+  width: 1160px;
+  margin: 0 auto;
+
 
 }
 
 .slider-image {
-
+  min-width: 532px;
 }
 
 .slider-info {
@@ -469,6 +480,10 @@ text-align: left;
 color: #464646;
 }
 
+.slider-info dl {
+
+}
+
 .slider-info dt {
 font-family: Gilroy, Arial, sans-serif;
 font-size: 36px;
@@ -493,6 +508,13 @@ color: #464646;
 
 .items-list {
   list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: space-between;
 }
 
 .product-section {
@@ -505,6 +527,10 @@ color: #464646;
   color: #000000;
 
   background-color: rgb(240, 197, 46, 0.5);
+
+  width: 160px;
+  height: 160px;
+  display: block;
 }
 
 .product-section:hover,
@@ -522,6 +548,16 @@ color: #464646;
 
 .advantages-list {
   background-color: #e5e5e5;
+
+  display: flex;
+  flex-direction: row;
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: 84px; 
+}
+
+.advantages-list form {
+  min-width: 278px;
 }
 
 .advantages-list h3{
@@ -570,11 +606,13 @@ color: #464646;
   color: #f7e184;
 }
 
-.partners-list {
-
-}
-
-.partners-list ul{
+.partners-list ul {
+  display: flex;
+  flex-direction: row;
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: 94px;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -582,6 +620,7 @@ color: #464646;
   width: 1160px;
   margin: 0 auto;
   margin-bottom: 90px;
+  margin-top: 93px;
   display: flex;
   justify-content: space-between;
 
