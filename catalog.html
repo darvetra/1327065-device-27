@@ -91,10 +91,39 @@
         <li><a>Моноподы для селфи</a></li>
       </ul>
 
+      <div class="filter-catalog">
+        <h3>Фильтр:</h3>
+        <div class="sort-catalog">
+          <h3>Сортировка</h3>
+
+          <ul class="sort-nav">
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По популярности</a></li>
+          </ul>
+
+          <ul class="arrow-nav">
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                  <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                  <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="catalog-wrapper">
         <aside class="filter-aside">
           <form action="https://echo.htmlacademy.ru/courses" method="GET">
-            <h3>Фильтр:</h3>
 
             <fieldset>
               <legend>Стоимость</legend>
@@ -167,33 +196,6 @@
         </aside>
 
         <section class="page-catalog">
-          <div class="sort-catalog">
-            <h3>Сортировка</h3>
-
-            <ul class="sort-nav">
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По популярности</a></li>
-            </ul>
-
-            <ul class="arrow-nav">
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
-                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
-                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <ul class="goods-list">
             <li>
               <article class="catalog-item">
@@ -224,18 +226,21 @@
               </article>
             </li>
           </ul>
+
+          <section class="pagination">
+            <ul>
+              <li class="pagination-item"><a>Назад</a></li>
+              <li class="pagination-item"><a>1</a></li>
+              <li class="pagination-item"><a href="#">2</a></li>
+              <li class="pagination-item"><a href="#">3</a></li>
+              <li class="pagination-item"><a href="#">Вперед</a></li>
+            </ul>
+        </section>
+
         </section>
       </div>
 
-      <section class="pagination">
-        <ul>
-          <li class="pagination-item"><a>Назад</a></li>
-          <li class="pagination-item"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">Вперед</a></li>
-        </ul>
-    </section>
+
 
     </main>
 

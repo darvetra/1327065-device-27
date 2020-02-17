@@ -228,62 +228,6 @@ a {
   margin-top: 44px;
 }
 
-.breadcrumbs {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.71;
-  letter-spacing: 0.14px;
-  text-align: left;
-  list-style-type: none;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 1040px;
-  margin: 0 auto;
-  margin-top: 30px;;
-  padding: 0;
-}
-
-.breadcrumbs li {
-  display: inline-block; /* Почему-то не работает! Разобраться!!! */
-}
-
-.breadcrumbs a {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.breadcrumbs a:hover, 
-.breadcrumbs a:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.breadcrumbs a:active {
-  color: rgba(0, 0, 0, 0.1);
-} 
-
-.catalog-wrapper {
-  width: 1160px;
-  display: flex;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-.goods-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.goods-list li {
-  width: 360px;
-  margin: 0;
-}
-
-.goods-list li:nth-child(2n+1) {
-  margin-right: 40px;
-}
-
 /* 
     FOOTER
 */
@@ -653,14 +597,55 @@ color: #464646;
   width: 560px;
 }
 
-/* 
-    catalog.html 
-*/
-.filter-aside {
- background-color: #ebebeb;
+/* - - - - - - - - - - - - - catalog.html - - - - - - - - - - - - - */
+
+.breadcrumbs {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  letter-spacing: 0.14px;
+  text-align: left;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 1040px;
+  margin: 0 auto;
+  margin-top: 30px;;
+  padding: 0;
 }
 
-.filter-aside h3 {
+.breadcrumbs li {
+  display: inline-block; /* Почему-то не работает! Разобраться!!! */
+}
+
+.breadcrumbs a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover, 
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+} 
+
+.filter-catalog {
+  display: flex;
+  flex-direction: row;
+
+  width: 1160px;
+  margin: 0 auto;
+
+  background-color: #ebebeb;
+  height: 71px;
+}
+
+.filter-catalog h3 {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -669,6 +654,49 @@ color: #464646;
   text-align: left;
   color: #000000;
   text-transform: uppercase;
+
+
+}
+
+.filter-catalog > h3 {
+  width: 327px;
+
+  padding: 0;
+  margin: 0;
+  padding-left: 60px;
+  background-color: #d9d9d9; 
+
+}
+
+.sort-catalog > h3 {
+  padding: 0;
+  padding-left: 73px;
+}
+
+.catalog-wrapper {
+  width: 1160px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-list li {
+  width: 360px;
+  margin: 0;
+}
+
+.goods-list li:nth-child(2n+1) {
+  margin-right: 40px;
+}
+
+.filter-aside {
+ background-color: #ebebeb;
+ width: 327px;                      /* Почему-то не работает! Разобраться потом! */
 }
 
 .filter-aside fieldset {
@@ -705,7 +733,16 @@ color: #464646;
 }
 
 .sort-catalog {
+  display: flex;
+  flex-direction: row;
+}
 
+.sort-catalog ul {
+  list-style-type: none;
+}
+
+.sort-catalog li {
+  display: inline-block;
 }
 
 .sort-catalog h3{
@@ -821,6 +858,13 @@ color: #464646;
 .pagination ul{
   list-style-type: none;
   background-color: #ebebeb;
+
+  display: flex;
+  flex-direction: row;
+  width: 759px;
+  margin: 0 auto;
+  margin-bottom: 77px;
+  justify-content: space-between;
 }
 
 .pagination a {
