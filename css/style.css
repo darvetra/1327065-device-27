@@ -1,6 +1,8 @@
-/* Стили */
-/* BODY */
-/* Шрифты */ 
+
+/* - - - - - - - - - - - - - BODY - - - - - - - - - - - - - */
+
+/* - - - - - - - - - - - - - Шрифты - - - - - - - - - - - - - */
+ 
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
@@ -88,7 +90,8 @@ a {
   overflow: hidden;
 }
 
-/* BUTTONS */
+/* - - - - - - - - - - - - - BUTTONS - - - - - - - - - - - - - */
+
 .yellow-button {
   background-color: #f0c52e;
   border: 0;
@@ -114,7 +117,8 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* HEADER */
+/* - - - - - - - - - - - - - Header - - - - - - - - - - - - - */
+
 .page-header {
   background-color: rgb(240, 197, 46, 0.5); /* f0c52e в RGBA */ 
   display: flex;
@@ -207,9 +211,8 @@ a {
 .anchor-link {
 
 }
-/*
-    MAIN
-*/
+
+/* - - - - - - - - - - - - - MAIN - - - - - - - - - - - - - */
 
 .main-page h1 {
   font-family: Gilroy, Arial, sans-serif;
@@ -223,23 +226,21 @@ a {
   display: flex;
   flex-direction: column;
 
-  width: 1040px;
+  width: 1160px;
   margin: 0 auto;
   margin-top: 44px;
+  padding-left: 60px;
 }
 
-/* 
-    FOOTER
-*/
+/* - - - - - - - - - - - - - FOOTER - - - - - - - - - - - - - */
+
 .page-footer {
   background-color: #464646;
   display: flex;
   flex-direction: column;
-  /* width: 1160px; */
-
 }
 
-.footer-wrapper {
+.footer-layout {
   width: 1160px;
   margin: 0 auto;
 
@@ -248,21 +249,21 @@ a {
   align-items: baseline;
 }
 
-.footer-wrapper:nth-child(1) {
+.footer-layout:nth-child(1) {
   margin-top: 65px;
 }
 
-.footer-wrapper:nth-child(2) {
+.footer-layout:nth-child(2) {
   margin-top: 40px;
   max-height: 30px;
 }
 
-.footer-wrapper:nth-child(3) {
+.footer-layout:nth-child(3) {
   margin-top: 66px;
   margin-bottom: 66px;
 }
 
-.footer-wrapper p {
+.footer-layout p {
   margin: 0;
 }
 
@@ -366,7 +367,7 @@ margin: 0 20px;
   opacity: 0.1;
 }
 
-/* Pop-up */
+/* - - - - - - - - - - - - - POP - UP - - - - - - - - - - - - - */
 .popup-enter {
 
 }
@@ -375,9 +376,7 @@ margin: 0 20px;
     
 }
 
-/* 
-    index.html 
-*/
+/* - - - - - - - - - - - - - Index.html - - - - - - - - - - - - - */
 
 .slider {
   display: flex;
@@ -490,9 +489,11 @@ color: #464646;
   opacity: 0.3;
 }
 
-.advantages-list {
+.advantages-wrapper {
   background-color: #e5e5e5;
+}
 
+.advantages-list {
   display: flex;
   flex-direction: row;
   width: 1160px;
@@ -611,10 +612,11 @@ color: #464646;
   display: flex;
   flex-direction: column;
 
-  width: 1040px;
+  width: 1160px;
   margin: 0 auto;
-  margin-top: 30px;;
+  margin-top: 30px;
   padding: 0;
+  padding-left: 60px;
 }
 
 .breadcrumbs li {
@@ -640,7 +642,7 @@ color: #464646;
 
   width: 1160px;
   margin: 0 auto;
-
+  margin-top: 49px;
   background-color: #ebebeb;
   height: 71px;
 }
@@ -654,8 +656,6 @@ color: #464646;
   text-align: left;
   color: #000000;
   text-transform: uppercase;
-
-
 }
 
 .filter-catalog > h3 {
@@ -676,13 +676,27 @@ color: #464646;
 .catalog-wrapper {
   width: 1160px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
   margin: 0 auto;
-  margin-top: 50px;
+}
+
+.page-catalog {
+  width: 833px;
+}
+
+.page-catalog ul {
+  list-style-type: none;
 }
 
 .goods-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between; 
+  padding: 0;
+  padding-left: 73px;
+  margin: 0;
+  margin-top: 69px;
 }
 
 .goods-list li {
@@ -690,13 +704,9 @@ color: #464646;
   margin: 0;
 }
 
-.goods-list li:nth-child(2n+1) {
-  margin-right: 40px;
-}
-
 .filter-aside {
  background-color: #ebebeb;
- width: 327px;                      /* Почему-то не работает! Разобраться потом! */
+ width: 327px;
 }
 
 .filter-aside fieldset {
@@ -754,10 +764,6 @@ color: #464646;
   text-align: left;
   color: #000000;
   text-transform: uppercase;
-}
-
-.page-catalog ul {
-  list-style-type: none;
 }
 
 .sort-nav a {
