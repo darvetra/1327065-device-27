@@ -73,6 +73,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
  }
 
 a {
@@ -128,8 +129,9 @@ a {
   margin-top: 40px;
   padding: 0 60px;
   width: 1160px;
-  height: 299px;
+  height: 186px;
 
+  position: relative;
 }
 
 .page-header input[type="text"] {
@@ -149,6 +151,9 @@ a {
 
 .logo {
   align-self: flex-start;
+
+  position: absolute;
+  margin-top: -17px;
 }
 
 .logo:hover,
@@ -179,12 +184,28 @@ a {
 
 .user-nav {
  width: 100%;
- margin-top: 40px;
+ margin-top: 44px;
  padding: 0;
+
+ display: flex;
+ justify-content: space-between;
+}
+
+.user-nav svg {                   /* ПРОВЕРЬ СТИЛИ */
+  margin-top: 6px;
+  margin-left: 3px;
 }
 
 .user-nav li {
   display: inline-block;
+}
+
+.user-nav li:nth-child(1) {
+  margin-right: 280px;
+}
+
+.user-nav svg {
+  margin-right: 10px;
 }
 
 .nav {
@@ -196,16 +217,29 @@ a {
   letter-spacing: 3.6px;
   text-align: left;
   text-transform: uppercase;
-
   width: 100%;
+
+  margin-top: 5px;
 }
 
 .nav-list {
   padding: 0;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-list-item {
   display: inline-block;
+
+}
+
+.nav-list-item:nth-child(1) {
+  margin-right: 240px;
+}
+
+.nav-list-item:nth-child(4) {
+  margin-left: 50px;
 }
 
 .anchor-link {
@@ -228,7 +262,7 @@ a {
 
   width: 1160px;
   margin: 0 auto;
-  margin-top: 44px;
+  margin-top: 38px;
   padding-left: 60px;
 }
 
@@ -610,17 +644,37 @@ color: #464646;
   list-style-type: none;
 
   display: flex;
-  flex-direction: column;
 
   width: 1160px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 0;
   padding-left: 60px;
 }
 
 .breadcrumbs li {
-  display: inline-block; /* Почему-то не работает! Разобраться!!! */
+  position: relative;
+  margin-right: 39px;
+}
+
+.breadcrumbs li::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  margin-left: -24px;
+
+  width: 17px;
+  height: 29px;
+
+  background-image: url("../img/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs li:first-child::after {
+  visibility: hidden;
 }
 
 .breadcrumbs a {
@@ -642,7 +696,7 @@ color: #464646;
 
   width: 1160px;
   margin: 0 auto;
-  margin-top: 49px;
+  margin-top: 46px;
   background-color: #ebebeb;
   height: 71px;
 }
@@ -660,12 +714,10 @@ color: #464646;
 
 .filter-catalog > h3 {
   width: 327px;
-
   padding: 0;
   margin: 0;
   padding-left: 60px;
   background-color: #d9d9d9; 
-
 }
 
 .sort-catalog > h3 {
@@ -707,10 +759,33 @@ color: #464646;
 .filter-aside {
  background-color: #ebebeb;
  width: 327px;
+
+
+}
+
+.filter-aside form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .filter-aside fieldset {
   border: none;
+  margin: 0;
+  margin-right: 55px;
+  width: 201px;
+}
+
+.filter-aside fieldset:nth-child(1) {
+  margin-top: 68px;
+}
+
+.filter-aside fieldset:nth-child(2) {
+  margin-top: 30px;
+}
+
+.filter-aside fieldset:nth-child(3) {
+  margin-top: 5px;
 }
 
 .filter-aside legend {
@@ -721,10 +796,14 @@ color: #464646;
   letter-spacing: 0.18px;
   text-align: left;
   color: #000000;
+  border-top: 2px solid #000000;
+  width: 201px;
+  padding-top: 11px;
 }
 
 .filter-aside ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .filter-aside label {
@@ -735,11 +814,38 @@ color: #464646;
   letter-spacing: 0.14px;
   text-align: left;
   color: #000000;
+
 }
 
 .filter-aside label:hover,
 .filter-aside label:focus {
   opacity: 0.6;
+}
+
+.filter-checkbox {
+  display: none;
+}
+
+.filter-checkbox + label::before {
+  content: url("../img/checkbox-off.svg");
+  margin-right: 11px;
+}
+
+.filter-checkbox:checked + label::before {
+  content: url("../img/checkbox-on.svg");
+}
+
+.filter-radio {
+  display: none;
+}
+
+.filter-radio + label::before {
+  content: url("../img/radio-off.svg");
+  margin-right: 11px;
+}
+
+.filter-radio:checked + label::before {
+  content: url("../img/radio-on.svg");
 }
 
 .sort-catalog {

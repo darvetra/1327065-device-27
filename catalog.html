@@ -87,7 +87,7 @@
       <h1>Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Каталог товаров</a></li>
         <li><a>Моноподы для селфи</a></li>
       </ul>
 
@@ -141,34 +141,24 @@
               <legend>Цвет</legend>
               <ul>
                 <li>
-                  <label>
-                    <input type="checkbox" name="black" value="" checked>
-                    Черный
-                  </label>
+                  <input type="checkbox" class="filter-checkbox" name="black" id="color-black" value="" checked>
+                  <label for="color-black">Черный</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="white" value="">
-                    Белый
-                  </label>
+                  <input type="checkbox" class="filter-checkbox" name="white" id="color-white" value="">
+                  <label for="color-white">Белый</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="blue" value="" checked>
-                    Синий
-                  </label>
+                  <input type="checkbox" class="filter-checkbox" name="blue" id="color-blue" value="" checked>
+                  <label for="color-blue">Синий</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="red" value="" checked>
-                    Красный
-                  </label>
+                  <input type="checkbox" class="filter-checkbox" name="red" id="color-red" value="" checked>
+                  <label for="color-red">Красный</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="checkbox" name="pink" value="">
-                    Розовый
-                  </label>
+                  <input type="checkbox" class="filter-checkbox" name="pink" id="color-pink" value="">
+                  <label for="color-pink">Розовый</label>
                 </li>
               </ul>
             </fieldset>
@@ -177,16 +167,12 @@
               <legend>Bluetooth</legend>
               <ul>
                 <li>
-                  <label>
-                    <input type="radio" name="Bluetooth" value="yes" checked>
-                    Есть
-                  </label>
+                  <input type="radio" class="filter-radio" name="Bluetooth" id="radio-yes" value="yes" checked>
+                  <label for="radio-yes">Есть</label>
                 </li>
                 <li>
-                  <label>
-                    <input type="radio" name="Bluetooth" value="no">
-                    Нет
-                  </label>
+                  <input type="radio" class="filter-radio" name="Bluetooth" id="radio-no" value="no">
+                  <label for="radio-no">Нет</label>
                 </li>
               </ul>
             </fieldset>
@@ -245,7 +231,7 @@
     </main>
 
     <footer class="page-footer">
-      <div class="footer-wrapper">
+      <div class="footer-layout">
         <div class="footer-logo">
           <a href="index.html" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" width="163" height="35" alt="DEVICE">
@@ -286,7 +272,7 @@
         </ul>
       </div>
 
-      <div class="footer-wrapper">
+      <div class="footer-layout">
         <div class="footer-address"><p>г. Москва, ул. Строителей, 15</p></div>
         <ul class="footer-nav">
           <li><a href="#">Доставка</a></li>
@@ -296,7 +282,7 @@
         <p><a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
       </div>
 
-      <div class="footer-wrapper">
+      <div class="footer-layout">
         <div class="footer-decor">
         </div>
 
