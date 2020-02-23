@@ -94,9 +94,7 @@ a {
 /* - - - - - - - - - - - - - BUTTONS - - - - - - - - - - - - - */
 
 .yellow-button {
-  background-color: #f0c52e;
   border: 0;
-
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -105,17 +103,47 @@ a {
   text-align: center;
   color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
-  display: inline;
-  max-width: 220px;
+  display: inline-block;
+  min-width: 160px;
+  cursor: pointer;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  background-color: inherit;
 }
 
-.yellow-button:hover,
-.yellow-button:focus {
+.yellow-button::after {
+  min-width: 160px;
+  content: "";
+  height: 8px;
+  background-color: #f0c52e;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+}
 
+.yellow-button:hover::after,
+.yellow-button:focus::after {
+  height: 40px;
+  top: -4px;
 }
 
 .yellow-button:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-aside .yellow-button::after {
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -4px;
+}
+
+.about-us-section .yellow-button::after {
+  width: 260px;
+  margin-left: -130px;
+  margin-top: -4px;
+
 }
 
 /* - - - - - - - - - - - - - Header - - - - - - - - - - - - - */
@@ -189,9 +217,11 @@ a {
 
  display: flex;
  justify-content: space-between;
+
+ height: 50px;
 }
 
-.user-nav svg {                   /* ПРОВЕРЬ СТИЛИ */
+.user-nav svg {                   
   margin-top: 6px;
   margin-left: 3px;
 }
@@ -201,11 +231,62 @@ a {
 }
 
 .user-nav li:nth-child(1) {
-  margin-right: 280px;
+  width: 500px;
+}
+
+.user-nav a{
+  line-height: 50px;
 }
 
 .user-nav svg {
   margin-right: 10px;
+}
+
+.user-nav label:hover {
+  border-bottom: 2px solid #000000;
+  padding-bottom: 14px;
+}
+
+.user-nav input[type="text"] {
+  width: 278px;
+  height: 49px;
+}
+
+.search-button {
+  display: none;
+  border: 0;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-left: 2px solid #000000;
+  background-color: inherit;
+  width: 85px;
+  height: 49px; 
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 1);
+  display: inline-block;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+}
+
+.user-nav label:hover .search-button {
+  border: 0;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-left: 2px solid #000000;
+  width: 85px;
+  height: 49px;
+  display: inline-block;
+}
+
+.exit-button {
+  color: rgba(0, 0, 0, 0.3);                /* - - - - - - - - НЕ РАБОТАЕТ ПОЧЕМУ-ТО  - - - - - - - - */
 }
 
 .nav {
@@ -240,6 +321,52 @@ a {
 
 .nav-list-item:nth-child(4) {
   margin-left: 50px;
+}
+
+.nav-catalog {
+  display: none;
+  position: absolute;
+  padding: 0;
+  padding-top: 20px;
+  height: 129px;
+  width: 1160px;
+  margin-left: -60px;
+  background-color: #F7E296;
+}
+
+.nav-list li:hover > .nav-catalog {
+  display: inherit;
+}
+
+.nav-catalog li {
+  /* Шрифт */
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2.4;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #000000;
+  text-transform: none;
+
+  /* Все остальное*/
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 270px;
+  padding-right: 30px;
+}
+
+.nav-catalog li:nth-of-type(1),
+.nav-catalog li:nth-of-type(4),
+.nav-catalog li:nth-of-type(6) {
+  padding-left: 60px;
+}
+
+.nav-catalog li:nth-of-type(2),
+.nav-catalog li:nth-of-type(5) {
+  width: 160px;
 }
 
 .anchor-link {
@@ -399,6 +526,20 @@ margin: 0 20px;
 
 .socials a:active {
   opacity: 0.1;
+}
+
+/* .logo-academy:hover path,
+.logo-academy:focus path {
+  fill:
+} */
+
+.logo-academy:hover,
+.logo-academy:focus {
+  opacity: 0.6;
+}
+
+.logo-academy:active {
+  opacity: 0.3;
 }
 
 /* - - - - - - - - - - - - - POP - UP - - - - - - - - - - - - - */
@@ -822,6 +963,11 @@ color: #464646;
   opacity: 0.6;
 }
 
+.filter-aside label::before {
+  width: 27px;   
+  display: inline-block;                                             
+}
+
 .filter-checkbox {
   display: none;
 }
@@ -924,6 +1070,9 @@ color: #464646;
   line-height: 1.33;
   letter-spacing: 0.18px;
   text-align: left;
+
+  float: left;
+  width: 270px;
 }
 
 .catalog-item a,
@@ -941,6 +1090,9 @@ color: #464646;
   letter-spacing: 0.16px;
   text-align: right;
   color: #464646;
+
+  float:right;
+  /* width: 100px; */
 }
 
 .catalog-item {
