@@ -128,14 +128,19 @@
         <aside class="filter-aside">
           <form action="https://echo.htmlacademy.ru/courses" method="GET">
 
-            <fieldset>
-              <legend>Стоимость</legend>
-              <div class="range-slider">
-                <input type="number" value="0" name="min">
-                <input type="number" value="0" name="max">
-                <div class="range-slider-track">
-                  <div class="range-slider-pin range-slider-pin-min"></div>
-                  <div class="range-slider-pin range-slider-pin-max"></div>
+            <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+                  <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
                 </div>
               </div>
             </fieldset>
