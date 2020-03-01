@@ -98,7 +98,7 @@ a {
   overflow: hidden;
 }
 
-                          /* - - - - - - - - - - - - - Кнопки - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Кнопки - - - - - - - - - - - - -                          */
 
 .yellow-button {
   border: 0;
@@ -163,7 +163,7 @@ a {
 
 }
 
-                          /* - - - - - - - - - - - - - Header - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Header - - - - - - - - - - - - -                          */
 
 .page-header {
   background-color: rgb(240, 197, 46, 0.5); /* f0c52e в RGBA */ 
@@ -432,7 +432,7 @@ a.exit-button {
   color: #000000;
 }
 
-/*                          - - - - - - - - - - - - - Подвал - - - - - - - - - - - - -                          */
+/*                          - - - - - - - - - - - - - Footer - - - - - - - - - - - - -                          */
 
 .page-footer {
   background-color: #464646;
@@ -730,6 +730,22 @@ margin: 0 20px;
   text-align: left;
   color: #464646;
   margin-bottom: 50px;
+}
+
+/*                          - - - - - - - - - - - - - Index.html / Слайдер / Хак: загружаем изображения слайдера заранее - - - - - - - - - - - - -                          */
+
+.slider-image::before,
+.slider-image::after {
+  content: "";
+  visibility: hidden;
+}
+
+.slider-image::before{
+  background-image: url("../img/slider-2.png");
+}
+
+.slider-image::after {
+  background-image: url("../img/slider-3.png");
 }
 
 /*                          - - - - - - - - - - - - - Index.html / Слайдер / Стилизация характеристик - - - - - - - - - - - - -                          */
@@ -1090,9 +1106,9 @@ margin: 0 20px;
   margin-left: 40px;
 }
 
-                          /* - - - - - - - - - - - - - catalog.html - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Catalog.html - - - - - - - - - - - - -                          */
 
-                          /* - - - - - - - - - - - - - catalog.html - Хлебные крошки - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Catalog.html / Хлебные крошки - - - - - - - - - - - - -                          */
 .breadcrumbs {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
@@ -1149,7 +1165,7 @@ margin: 0 20px;
   color: rgba(0, 0, 0, 0.1);
 } 
 
-                          /* - - - - - - - - - - - - - catalog.html - Сортировка - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Catalog.html / Сортировка - - - - - - - - - - - - -                          */
 
 .filter-catalog {
   display: flex;
@@ -1273,7 +1289,7 @@ margin: 0 20px;
   opacity: 1;
 }
 
-                          /* - - - - - - - - - - - - - catalog.html - Список товаров - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Catalog.html / Список товаров - - - - - - - - - - - - -                          */
 
 .catalog-wrapper {
   width: 1160px;
@@ -1306,6 +1322,112 @@ margin: 0 20px;
   margin: 0;
 }
 
+.catalog-item {
+  /* Позиционирование */
+  position: relative;
+}
+
+.catalog-item .flag {
+  /* Позиционирование */
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  z-index: 20;
+  overflow: hidden;
+
+  /* Блочная модель */
+  width: 61px;
+  height: 61px;
+
+  /* Оформление */
+  opacity: 0.2;
+  border: solid 2px #000000;
+  border-radius: 50%;
+}
+
+.catalog-item .flag-new {
+  padding-top: 17px;
+  
+  /* Типографика */
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.71;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalog-item .actions {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  /* Блочная модель */
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 380px;
+  padding: 0;
+  padding-top: 180px;
+
+  /* opacity: 0.7;
+  background-color: #eeeeee; */
+  background-color: rgba(238, 238, 238, 0.7);
+}
+
+.catalog-item .actions { 
+  display: none;
+}
+
+.catalog-item:hover .actions {
+  display: flex;
+}
+
+.actions a {
+ /* Блочная модель */
+ margin: 0 auto;
+}
+
+.actions .yellow-button {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.actions .yellow-button::after {
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -4px;
+
+}
+
+.actions .yellow-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.actions .compare {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.54;
+  letter-spacing: 0.13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5); 
+
+  margin: 0;
+  margin-top: 25px;
+}
+
+.actions .compare:hover,
+.actions .compare:focus {
+  color: rgba(0, 0, 0, 1); 
+}
+
+.actions .compare:active {
+  color: rgba(0, 0, 0, 0.2); 
+}
+
 .catalog-item h2 {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
@@ -1336,10 +1458,6 @@ margin: 0 20px;
 
   float:right;
   /* width: 100px; */
-}
-
-.catalog-item {
-
 }
 
                           /* - - - - - - - - - - - - - catalog.html - Блок с боковым фильтром - - - - - - - - - - - - - */
