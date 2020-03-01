@@ -1715,7 +1715,8 @@ margin: 0 20px;
 
 .pagination-item a{
   margin: auto;
-
+  padding-top: 26px;
+  padding-bottom: 25px;
 }
 
 .pagination-item a:not([href]) {
