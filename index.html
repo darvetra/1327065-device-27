@@ -105,7 +105,7 @@
           </div>
           <div class="slider-info">
             <h2>Делай селфи,<br> как Бен Стиллер!</h2>
-            <p> Самая длинная палка для селфи доступна в нашем магазине.<br>
+            <p> Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a href="#" class="yellow-button">Подробнее</a>
             <dl>
@@ -261,8 +261,8 @@
           <div class="advantage-item">
             <h3>Доставка</h3>
             <p>
-              Мы с удовольствием доставим ваш товар прямо к вашему<br>
-              подъезду совершенно бесплатно! Ведь мы неплохо<br>
+              Мы с удовольствием доставим ваш товар прямо к вашему
+              подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="136" height="164">
@@ -276,7 +276,7 @@
           <div class="advantage-item">
             <h3>Гарантия</h3>
             <p>
-              Если из-за возгорания купленного у нас товара у вас сгорит<br>
+              Если из-за возгорания купленного у нас товара у вас сгорит
               дом − не переживайте, мы выдадим вам новый. <br>
               Товар, не дом, конечно же.
             </p>
@@ -295,8 +295,8 @@
           <div class="advantage-item">
             <h3>Кредит</h3>
             <p>
-              Залезть в долговую яму стало проще! Кредитные <br>
-              консультанты подберут для вас наиболее выгодные <br>
+              Залезть в долговую яму стало проще! Кредитные 
+              консультанты подберут для вас наиболее выгодные 
               условия кредита. Выгодные для нашего банка, разумеется. 
             </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="156" height="188">
@@ -345,9 +345,9 @@
             России! DEVICE работает со многими транспортными компаниями:
           </p>
           <ul>
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
+            <li><span>Деловые Линии</span></li>
+            <li><span>Автотрейдинг</span></li>
+            <li><span>ЖелДорЭкспедиция</span></li>
           </ul>
           <a href="#" class="yellow-button">Подробнее о нас</a>
         </div>
@@ -358,7 +358,9 @@
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
             проверить работоспособность покупки. Всякое бывает.
           </p>
-          <a href="#"><img src="img/map.jpg" alt="Карта, как до нас добраться" width="560" height="222"></a>
+          <div class="img-map">
+            <a href="#"><img src="img/map.jpg" alt="Карта, как до нас добраться" width="560" height="222"></a>
+          </div>
           <a href="#" class="yellow-button">Напишите нам</a>
         </div>
       </section>
@@ -411,7 +413,7 @@
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <p><a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+        <p><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></p>
       </div>
 
       <div class="footer-layout">
@@ -456,26 +458,32 @@
       </div>
     </footer>
 
-    <section class="popup-enter visually-hidden">
+    <section class="modal modal-login visually-hidden">
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
       <form action="https://echo.htmlacademy.ru/courses" method="get">
         <label>
-          Ваше имя:
+          <span>Ваше имя:</span>
           <input type="text" name="name" value="Имя Фамилия"> 
         </label>
         <label>
-          Ваш e-mail:
+          <span>Ваш e-mail:</span>
           <input type="email" name="e-mail" value="email@example.com"> 
         </label>
         <label>
-          Текст письма:
+          <span>Текст письма:</span>
           <textarea name="" id="" cols="30" rows="10">В свободной форме</textarea>
         </label>
-        <button type="submit" value="Отправить">
+        <button type="submit" value="Отправить" class="yellow-button">Отправить</button>
       </form>
     </section>
 
-    <section class="popup-map visually-hidden">
-      <img src="img/map.jpg" alt="Карта, как до нас добраться" width="560" height="222">
+    <section class="modal modal-map visually-hidden">
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <img src="img/map-big-jpg.jpg" alt="Карта, как до нас добраться" width="960" height="559">
     </section>
 
   </body>

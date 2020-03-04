@@ -624,6 +624,7 @@ a.exit-button {
   letter-spacing: 0.47px;
   text-align: left;
   color: #000000;
+  width: 510px;
 }
 
 .slider-info p {
@@ -635,6 +636,7 @@ a.exit-button {
   text-align: left;
   color: #464646;
   margin-bottom: 48px;
+  width: 485px;
 }
 
 /*                          - - - - - - - - - - - - - Index.html / Слайдер / Хак: загружаем изображения слайдера заранее - - - - - - - - - - - - -                          */
@@ -710,7 +712,7 @@ a.exit-button {
   flex-direction: row;
   width: 1160px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 95px;
   padding: 0;
 
   /* Оформление */
@@ -735,6 +737,10 @@ a.exit-button {
 
   /* Оформление */
   background-color: rgb(240, 197, 46, 0.5);
+}
+
+.product-section:nth-of-type(2) svg {
+  margin-top: 40px;
 }
 
 .product-link:hover .product-image,
@@ -765,6 +771,7 @@ a.exit-button {
   letter-spacing: 0.18px;
   text-align: left;
   color: #000000;
+  margin-top: 35px;
 }
 
 .product-section:active svg {
@@ -775,7 +782,7 @@ a.exit-button {
 
 .advantages-wrapper {
   background-color: #e5e5e5;
-  margin-top: 184px;
+  margin-top: 163px;
   z-index: 1;
   position: relative;
 }
@@ -814,7 +821,7 @@ a.exit-button {
   text-align: left;
   color: #000000;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 }
 
 .advantages-list p{
@@ -825,6 +832,16 @@ a.exit-button {
   letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
+  width: 440px;
+}
+
+.black-button ~ ul li {
+  width: 278px;
+  margin: 21px 0;
+}
+
+.black-button ~ ul li:last-child {
+  margin-top: 24px;
 }
 
 .black-button ~ ul label {
@@ -835,15 +852,10 @@ a.exit-button {
   letter-spacing: 3.6px;
   text-align: center;
   color: #000000;
-
   text-transform: uppercase;
-  /* background-color: #f0c52e; */
-
-  width: 278px;
+  width: 160px;
   display: inline-block;
   padding: 9px 0;
-  margin: 20px 0;
-
   z-index: 3;
 }
                                                                           
@@ -857,18 +869,25 @@ a.exit-button {
   left: 50%;
   top: 50%;
   display: block;
-  margin-left: -80px;
+  margin-left: -140px;
   margin-top: -4px;
 }
 
 .advantages-list label:hover::after {
   height: 40px;
-  top: 25px;
+  top: 5px;
 }
 
 .black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) label,
 .black-button:nth-of-type(2):checked ~ ul li:nth-of-type(2) label,
 .black-button:nth-of-type(3):checked ~ ul li:nth-of-type(3) label {
+  /* background-color: #000000; */
+  color: #f7e184;
+}
+
+.black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) ,
+.black-button:nth-of-type(2):checked ~ ul li:nth-of-type(2) ,
+.black-button:nth-of-type(3):checked ~ ul li:nth-of-type(3)  {
   background-color: #000000;
   color: #f7e184;
 }
@@ -884,8 +903,14 @@ a.exit-button {
 
 .advantage-item svg {
   position: absolute;
-  right: 66px;
-  top: 10px;
+  right: 60px;
+  top: 11px;
+}
+
+.advantage-item:nth-of-type(2) svg,
+.advantage-item:nth-of-type(3) svg {
+  top: 0;
+  margin-top: -12px;
 }
 
 .advantages-list::after {
@@ -915,7 +940,7 @@ a.exit-button {
   display: block;
 }
 
-                          /* - - - - - - - - - - - - - Index.html - Блок с партнерами - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Index.html / Блок с партнерами - - - - - - - - - - - - -                          */
 
 .partners-list ul {
   display: flex;
@@ -966,13 +991,13 @@ a.exit-button {
   background-image: url("../img/logo-4-hover.png");
 }
 
-                          /* - - - - - - - - - - - - - Index.html - Блок о нас и контакты - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Index.html / Блок с о нас / Блок контакты - - - - - - - - - - - - -                          */
 
 .about-us-section {
   width: 1160px;
   margin: 0 auto;
-  margin-bottom: 90px;
-  margin-top: 93px;
+  margin-bottom: 87px;
+  margin-top: 98px;
   display: flex;
   justify-content: space-between;
 }
@@ -989,6 +1014,24 @@ a.exit-button {
   letter-spacing: 0.47px;
   text-align: left;
   color: #000000;
+  position: relative;
+  margin-bottom: 42px;
+}
+
+.about-us-section h2::before {
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  margin-top: -53px;
+}
+
+.about-us p {
+  width: 483px;
+  margin-top: 30px;
 }
 
 .about-us-section ul {
@@ -996,9 +1039,20 @@ a.exit-button {
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
-  color: #000000;
 
-  margin-bottom: 80px;
+  margin-top: 67px;
+  margin-bottom: 59px;
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.about-us-section li {
+  padding-left: 16px;
+  color: #e5e5e5;
+}
+
+.about-us-section span {
+  color: #000000;
 }
 
 .about-us-section a {
@@ -1011,6 +1065,14 @@ a.exit-button {
 
 .contacts a {
   margin: 0;
+}
+
+.contacts p {
+  margin-bottom: 40px;
+}
+
+.img-map {
+  margin-bottom: 19px;
 }
 
 .contacts .yellow-button {
@@ -1682,16 +1744,16 @@ a.exit-button {
 }
 
 .footer-layout:nth-child(1) {
-  margin-top: 65px;
+  margin-top: 62px;
 }
 
 .footer-layout:nth-child(2) {
-  margin-top: 40px;
+  margin-top: 37px;
   max-height: 30px;
 }
 
 .footer-layout:nth-child(3) {
-  margin-top: 66px;
+  margin-top: 63px;
   margin-bottom: 66px;
 }
 
@@ -1710,8 +1772,13 @@ display: inline-block;
 margin: 0 20px;
 }
 
+.footer-user-nav svg{
+  margin-right: 7px;
+}
+
 .footer-user-nav li:last-child{
   margin-right: 0;
+  margin-left: 15px;
   }
 
 .footer-user-nav a,
@@ -1749,17 +1816,24 @@ margin: 0 20px;
 .footer-nav {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 2;
   color: #ffffff;
   font-weight: 800;
   letter-spacing: 3.6px;
   text-align: left;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .footer-nav li {
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 22px;
+  margin-left: 0px;
+  margin-right: 30px;
+}
+
+.footer-nav li:nth-of-type(2) {
+  margin-right: 25px;
 }
 
 .footer-nav a {
@@ -1779,11 +1853,21 @@ margin: 0 20px;
   background-color: #ffc600;
   width: 80px;
   height: 7px;
+  position: relative;
+  bottom: 11px;
+}
+
+.socials  {
+  display: flex;
+  justify-content: space-between;
+  width: 219px;
+  padding: 0;
+  padding-right: 45px;
 }
 
 .socials li {
   display: inline-block;
-  margin: 0 11px;
+  margin: 0 12px;
 }
 
 .socials a {
@@ -1815,10 +1899,121 @@ margin: 0 20px;
 
 /*                          - - - - - - - - - - - - - Pop-up - - - - - - - - - - - - -                          */
 
-.popup-enter {
-
+/*                          - - - - - - - - - - - - - Модальное окно / Обратная связь - - - - - - - - - - - - -                          */
+.modal {
+  position: fixed;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
-.popup-map {
-    
+.modal form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../img/modal-close.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-login {
+  z-index: 100;
+  top: 200px;
+  left: 50%;
+
+  width: 960px;
+  height: 553px;
+  padding: 100px;
+  margin-left: -480px;
+  background-color: #ffffff;
+}
+
+.modal span {
+  display: block;
+
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  padding-bottom: 10px;
+}
+
+.modal input[type="text"],
+.modal input[type="email"] {
+  width: 360px;
+  height: 50px;
+
+  padding-left: 20px;
+}
+
+.modal input[type="text"] {
+  margin-right: 40px;
+  margin-bottom: 35px;
+}
+
+.modal-login textarea,
+.modal input[type="text"],
+.modal input[type="email"] {
+  background-color: #e5e5e5;
+  border: 0;
+
+  opacity: 0.5;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(70, 70, 70, 1);
+}
+
+.modal-login textarea {
+  width: 760px;
+  height: 156px;
+  opacity: 0.5;
+
+  padding-left: 20px;
+  padding-top: 15px;
+  margin-bottom: 50px;
+}
+
+.modal-login .yellow-button {
+  margin-right: 580px;
+  margin-left: 20px;
+}
+
+.modal-login .yellow-button::after {
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -4px;
+}
+
+/*                          - - - - - - - - - - - - - Модальное окно / Карта - - - - - - - - - - - - -                          */
+
+.modal-map {
+  z-index: 100;
+  top: 200px;
+  left: 50%;
+
+  width: 960px;
+  height: 559px;
+
+  margin-left: -480px;
+
+  background-color: #e5e5e5;
+  /* background-image: url("../img/map-big-jpg.jpg"); */
 }
