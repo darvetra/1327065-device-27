@@ -1975,6 +1975,9 @@ margin: 0 20px;
   background-repeat: no-repeat;
   border: 0;
   cursor: pointer;
+
+  z-index: 50;
+  opacity: 0.5;
 }
 
 .modal-login {
@@ -2067,4 +2070,20 @@ margin: 0 20px;
 
   background-color: #e5e5e5;
   /* background-image: url("../img/map-big-jpg.jpg"); */
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  /* margin: 0; */
 }
