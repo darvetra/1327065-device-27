@@ -302,6 +302,15 @@ a {
   line-height: 50px;
 }
 
+.user-nav-link:hover svg,
+.user-nav-link:focus svg {
+  opacity: 0.6;
+}
+
+.user-nav-link:active svg {
+  opacity: 0.3;
+}
+
 .user-nav label:hover {
   border-bottom: 2px solid #000000;
   padding-bottom: 14px;
@@ -785,6 +794,7 @@ a.exit-button {
   margin-top: 163px;
   z-index: 1;
   position: relative;
+  min-width: 1160px; /* лечим убегающий фон на маленьком экране */
 }
 
 .advantages-list {
@@ -1106,7 +1116,7 @@ a.exit-button {
   margin-right: 39px;
 }
 
-.breadcrumbs li::after {
+.breadcrumbs li:not(:first-of-type)::after {
   content: "";
 
   position: absolute;
@@ -1122,20 +1132,16 @@ a.exit-button {
   background-position: 0 0;
 }
 
-.breadcrumbs li:first-child::after {
-  visibility: hidden;
-}
-
-.breadcrumbs a {
+.breadcrumb a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.breadcrumbs a:hover, 
-.breadcrumbs a:focus {
+.breadcrumb:not(:last-of-type) a:hover, 
+.breadcrumb:not(:last-of-type) a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.breadcrumbs a:active {
+.breadcrumb:not(:last-of-type) a:active {
   color: rgba(0, 0, 0, 0.1);
 } 
 
@@ -1169,7 +1175,7 @@ a.exit-button {
   padding: 0;
   margin: 0;
   padding-left: 60px;
-  padding-top: 25px;
+  padding-top: 23px;
   background-color: #d9d9d9; 
 }
 
@@ -1177,13 +1183,16 @@ a.exit-button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 823px;
+  width: 833px;
+  padding-top: 23px;
 }
 
 .sort-catalog > h3 {
   padding: 0;
+  margin: 0;
   padding-left: 73px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  width: 250px;
 }
 
 .sort-catalog ul {
@@ -1206,13 +1215,22 @@ a.exit-button {
 }
 
 .sort-nav {
-  padding-right: 100px;
-  padding-top: 5px;
+  margin: 0;
+  padding: 0;
+  /* padding-right: 90px; */
+  /* padding-top: 5px; */
+  margin-top: 2px;
+  font-size: 0;
+  width: 503px;
 }
 
+.sort-nav li:first-of-type {
+  padding-left: 22px;
+}
 
 .sort-nav li {
   padding-right: 30px;
+
 }
 
 .sort-nav a {
@@ -1246,8 +1264,20 @@ a.exit-button {
   color: #000000;
 }
 
+.arrow-nav {
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  padding-left: 30px;
+  margin-top: -5px;
+}
+
 .arrow-nav li {
   padding-left: 10px;
+}
+
+.arrow-nav li:last-of-type {
+  padding-left: 13px;
 }
 
 .arrow-nav a {
@@ -1260,6 +1290,12 @@ a.exit-button {
 }
 
 .arrow-nav a:active {
+  opacity: 1;
+}
+
+.sort-nav .active-link,
+.arrow-nav .active-link {
+  color: #000000;
   opacity: 1;
 }
 
@@ -1736,6 +1772,8 @@ a.exit-button {
   background-color: #464646;
   display: flex;
   flex-direction: column;
+
+  min-width: 1160px; /* лечим разъезжающийся экран */
 }
 
 .footer-layout {

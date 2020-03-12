@@ -1,4 +1,6 @@
 
+//modal write us
+
 var link = document.querySelector(".write-us-link");
 
 var popup = document.querySelector(".modal-login");
@@ -25,7 +27,7 @@ link.addEventListener("click", function (evt) {
   if (storage) {   // Если значение существует, записываем логин в соответствующее поле ввода при открытии модального окна. из localStorage соответственно
     username.value = storage;
     // email.value = storage;
-    letter.focus(); // странная фигня какая-то
+    letter.focus(); 
   } else {
     username.focus(); //при открытии формы фокус автоматически устанавливался в поле ввода логина.
   }
@@ -57,6 +59,32 @@ window.addEventListener("keydown", function (evt) {
     if (popup.classList.contains("modal-show")) {
       popup.classList.remove("modal-show");
       popup.classList.add("modal-error");
+    }
+  }
+});
+
+// modal map
+
+var mapLink = document.querySelector(".contacts-link-map");
+
+var mapPopup = document.querySelector(".modal-map");
+var mapClose = mapPopup.querySelector(".modal-close");
+
+mapLink.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("modal-show");
+});
+
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
     }
   }
 });
