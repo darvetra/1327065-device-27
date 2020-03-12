@@ -1412,6 +1412,8 @@ a.exit-button {
 
   float: left;
   width: 270px;
+  margin-top: 23px;
+  margin-bottom: 47px;
 }
 
 .catalog-item a,
@@ -1432,6 +1434,8 @@ a.exit-button {
 
   float:right;
   /* width: 100px; */
+
+  margin-top: 23px;
 }
 
                           /* - - - - - - - - - - - - - catalog.html - Блок с боковым фильтром - - - - - - - - - - - - - */
@@ -1543,7 +1547,7 @@ a.exit-button {
 
 .range-controls {
   position: relative;
-  height: ;
+  /* height: ; */
   padding-top: 39px; /* 68? */
   padding-right: 20px;
   padding-left: 20px;
@@ -1633,7 +1637,7 @@ a.exit-button {
 
   padding-left: 73px;
 
-
+  margin-top: -10px;
 
 
 }
@@ -1795,6 +1799,10 @@ margin: 0 20px;
 
 .footer-user-nav a:active,
 .page-footer a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-user-nav .exit-button {
   color: rgba(255, 255, 255, 0.3);
 }
 
