@@ -1571,7 +1571,7 @@ a.exit-button {
   content: url("../img/radio-on.svg");
 }
 
-                          /* - - - - - - - - - - - - - catalog.html - Сложный фильтр с двойным range - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Catalog.html / Сложный фильтр с двойным range - - - - - - - - - - - - -                          */
 
 .filter-item {
 
@@ -1607,17 +1607,20 @@ a.exit-button {
   top: 31px;
   left: 0;
   
-  width: 4px;
-  height: 4px;
+  /* width: 4px; */
+  /* height: 4px; */
   padding: 0;
 
-  border: 8px solid #ffffff;
-  background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-  border-radius: 50%;
+  /* border: 8px solid #ffffff; */
+  /* background-color: #ababab; */
+  /* box-shadow: 0 2px 1px 0 #cfcfcf; */
+  /* border-radius: 50%; */
   cursor: pointer;
 
   box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .range-controls .toggle-min {
@@ -2026,6 +2029,15 @@ margin: 0 20px;
   opacity: 0.5;
 }
 
+.modal-close:hover,
+.modal-close:focus {
+  opacity: 1;
+}
+
+.modal-close:active{
+  opacity: 0.3;
+}
+
 .modal-login {
   z-index: 100;
   top: 200px;
@@ -2067,10 +2079,11 @@ margin: 0 20px;
 .modal-login textarea,
 .modal input[type="text"],
 .modal input[type="email"] {
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
+  background-color: #f2f2f2;
   border: 0;
 
-  opacity: 0.5;
+  /* opacity: 0.5; */
 
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
@@ -2081,10 +2094,30 @@ margin: 0 20px;
   color: rgba(70, 70, 70, 1);
 }
 
+.modal-login textarea:hover,
+.modal input[type="text"]:hover,
+.modal input[type="email"]:hover {
+  background-color: #eaeaea;
+}
+
+.modal-login textarea:focus,
+.modal input[type="text"]:focus,
+.modal input[type="email"]:focus {
+  background-color: #ffffff;
+  outline: solid 3px #f0c52e; /* граница для инпутов вместо рамки и стандартной обводки */ 
+  color: #464646;
+}
+
+.modal-login textarea:invalid,
+.modal input[type="text"]:invalid,
+.modal input[type="email"]:invalid {
+  background-color: #f6dada;
+}
+
 .modal-login textarea {
   width: 760px;
   height: 156px;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 
   padding-left: 20px;
   padding-top: 15px;
