@@ -1474,7 +1474,7 @@ a.exit-button {
   margin-top: 23px;
 }
 
-                          /* - - - - - - - - - - - - - catalog.html - Блок с боковым фильтром - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Catalog.html / Блок с боковым фильтром - - - - - - - - - - - - -                          */
 
 .filter-aside {
  background-color: #ebebeb;
@@ -1504,6 +1504,7 @@ a.exit-button {
 
 .filter-aside fieldset:nth-child(3) {
   margin-top: 5px;
+  margin-bottom: 28px;
 }
 
 .filter-aside legend {
@@ -1545,30 +1546,11 @@ a.exit-button {
   display: inline-block;                                             
 }
 
-.filter-checkbox {
-  display: none;
-}
+.filter-aside .yellow-button {
+  margin: 0;
+  left: 0;
 
-.filter-checkbox + label::before {
-  content: url("../img/checkbox-off.svg");
-  margin-right: 11px;
-}
-
-.filter-checkbox:checked + label::before {
-  content: url("../img/checkbox-on.svg");
-}
-
-.filter-radio {
-  display: none;
-}
-
-.filter-radio + label::before {
-  content: url("../img/radio-off.svg");
-  margin-right: 11px;
-}
-
-.filter-radio:checked + label::before {
-  content: url("../img/radio-on.svg");
+  margin-right: 88px;
 }
 
 /*                          - - - - - - - - - - - - - Catalog.html / Сложный фильтр с двойным range - - - - - - - - - - - - -                          */
@@ -1658,6 +1640,74 @@ a.exit-button {
   width: 22px;
   height: 24px;
   margin-bottom: 0;
+}
+
+/*                          - - - - - - - - - - - - - Catalog.html / Фильтр по цвету - - - - - - - - - - - - -                          */
+
+.filter-item-color ul {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 17px;
+  margin-left: -2px;
+}
+
+.filter-checkbox {
+  display: none;
+}
+
+.filter-item-color label {
+  position: relative;
+  padding: 0;
+  padding-left: 40px;
+}
+
+.filter-item-color label::before {
+  position: absolute;
+  top: 0;
+  margin-left: -40px;
+  margin-top: -5px;
+}
+
+.filter-checkbox + label::before {
+  content: url("../img/checkbox-off.svg");
+  margin-right: 13px;
+}
+
+.filter-checkbox:checked + label::before {
+  content: url("../img/checkbox-on.svg");
+}
+
+/*                          - - - - - - - - - - - - - Catalog.html / Фильтр Bluetooth - - - - - - - - - - - - -                          */
+
+.filter-item-bluetooth ul {
+  margin: 0;
+  margin-top: 14px;
+}
+
+.filter-item-bluetooth label {
+  position: relative;
+  padding: 0;
+  padding-left: 38px;
+}
+
+.filter-item-bluetooth label::before {
+  position: absolute;
+  top: 0;
+  margin-left: -40px;
+  margin-top: -5px;
+}
+
+.filter-radio {
+  display: none;
+}
+
+.filter-radio + label::before {
+  content: url("../img/radio-off.svg");
+  margin-right: 11px;
+}
+
+.filter-radio:checked + label::before {
+  content: url("../img/radio-on.svg");
 }
 
 /*                          - - - - - - - - - - - - - Catalog.html / Пагинация - - - - - - - - - - - - -                          */
