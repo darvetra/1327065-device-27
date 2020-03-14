@@ -1725,21 +1725,17 @@ a.exit-button {
 
 .pagination {
   display: flex;
-
   padding-left: 73px;
-
   margin-top: -10px;
-
-
 }
 
-.pagination ul{
+.pagination > ul{
   list-style-type: none;
   background-color: #ebebeb;
 
   display: flex;
   flex-direction: row;
-  width: 759px;
+  width: 760px;
   height: 70px;
   margin: 0 auto;
   padding: 0;
@@ -1780,6 +1776,11 @@ a.exit-button {
 
 .pagination-item {
   display: flex;
+  width: 136px;
+}
+
+.pagination-item:nth-of-type(2) {
+  width: 488px;
 }
 
 .pagination-item a{
@@ -1821,6 +1822,25 @@ a.exit-button {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.pagination-numbers {
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.pagination-numbers li:not(:last-of-type) {
+  padding: 0;
+  padding-right: 7px;
+}
+
+.pagination-numbers a {
+  padding: 0;
+  padding-top: 26px;
+  padding-left: 10px;
+  display: block;
+  width: 30px;
+}
+
 /*                          - - - - - - - - - - - - - Footer - - - - - - - - - - - - -                          */
 
 .page-footer {
@@ -1845,7 +1865,7 @@ a.exit-button {
 }
 
 .footer-layout:nth-child(2) {
-  margin-top: 37px;
+  margin-top: 35px;
   max-height: 30px;
 }
 
@@ -1856,6 +1876,12 @@ a.exit-button {
 
 .footer-layout p {
   margin: 0;
+}
+
+/*                          - - - - - - - - - - - - - Footer / Первый ряд - - - - - - - - - - - - -                          */
+
+.footer-logo {
+
 }
 
 .footer-user-nav,
@@ -1899,9 +1925,13 @@ margin: 0 20px;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-logo {
-
+.footer-user-nav .exit-li {
+  margin: 0;
+  margin-right: 19px;
+  margin-left: -5px;
 }
+
+/*                          - - - - - - - - - - - - - Footer / Второй ряд - - - - - - - - - - - - -                          */
 
 .footer-address p {
   font-family: "Open Sans", Arial, sans-serif;
@@ -1912,29 +1942,38 @@ margin: 0 20px;
   text-align: left;
   color: #ffffff;
   margin: 0;
+  width: 280px;
 }
 
 .footer-nav {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
-  line-height: 2;
+  line-height: 2.2;
   color: #ffffff;
   font-weight: 800;
   letter-spacing: 3.6px;
   text-align: left;
   text-transform: uppercase;
   padding: 0;
+
+  width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-nav li {
-  display: inline-block;
-  margin: 0 22px;
+  /* display: inline-block; */
+  margin: 0;
   margin-left: 0px;
-  margin-right: 30px;
+  margin-right: 35px;
 }
 
-.footer-nav li:nth-of-type(2) {
+/* .footer-nav li:nth-of-type(2) {
   margin-right: 25px;
+} */
+
+.footer-nav li:last-of-type {
+  margin-right: 0;
 }
 
 .footer-nav a {
@@ -1950,6 +1989,13 @@ margin: 0 20px;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.footer-layout:nth-of-type(2) > p {
+  width: 280px;
+  text-align: right;
+}
+
+/*                          - - - - - - - - - - - - - Footer / Третий ряд - - - - - - - - - - - - -                          */
+
 .footer-decor {
   background-color: #ffc600;
   width: 80px;
@@ -1960,10 +2006,9 @@ margin: 0 20px;
 
 .socials  {
   display: flex;
-  justify-content: space-between;
-  width: 219px;
+  justify-content: center;
+  width: 1000px;
   padding: 0;
-  padding-right: 45px;
 }
 
 .socials li {
@@ -1982,6 +2027,10 @@ margin: 0 20px;
 
 .socials a:active {
   opacity: 0.1;
+}
+
+.logo-academy {
+  margin-left: 53px;
 }
 
 /* .logo-academy:hover path,
