@@ -1574,99 +1574,90 @@ a.exit-button {
 /*                          - - - - - - - - - - - - - Catalog.html / Сложный фильтр с двойным range - - - - - - - - - - - - -                          */
 
 .filter-item {
-
-}
-
-.range-filter {
-
+  padding-bottom: 37px;
 }
 
 .range-controls {
   position: relative;
-  /* height: ; */
-  padding-top: 39px; /* 68? */
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0;
+  padding-top: 30px;  
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: #dbdbdb;
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 60%;
   height: 2px;
-
   background: #00ca74;
 }
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 20px; 
   left: 0;
-  
-  /* width: 4px; */
-  /* height: 4px; */
   padding: 0;
 
-  /* border: 8px solid #ffffff; */
-  /* background-color: #ababab; */
-  /* box-shadow: 0 2px 1px 0 #cfcfcf; */
-  /* border-radius: 50%; */
   cursor: pointer;
-
-  box-sizing: content-box;
 
   display: flex;
   flex-direction: column;
 }
 
 .range-controls .toggle-min {
-  left: 50px;
+  left: 0;
+  margin-left: -6px;
 }
 
 .range-controls .toggle-max {
-  left: 110px;
+  left: 107px;
 }
 
-.price-controls {
-  font-size: 0;
+.toggle-max label {
+  margin-left: -18px;
 }
 
-.price-controls label {
-  display: inline-block;
-  width: 50%;
-  
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.price-controls input {
-  width: 60px;
-  padding: 8px 10px;
-  margin-left: 10px;
+.toggle label {
+  max-width: 75px;
+  overflow: hidden;
 
   font-family: Gilroy, Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
   letter-spacing: normal;
-  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+}
+
+.toggle input {
+  font-family: Gilroy, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  letter-spacing: normal;
   color: rgba(0, 0, 0, 0.2);
 
   border: none;
-  border-radius: 5px;
-  background: #f1f1f1;
+  background-color: inherit;
+
+  width: 55px;
+  margin-left: 5px;
 }
 
-.min-price {
-
+.toggle img {
+  width: 20px;
+  height: 22px;
+  margin-bottom: 2px;
 }
 
-.max-price {
-  text-align: right;
+.toggle img:active {
+  width: 22px;
+  height: 24px;
+  margin-bottom: 0;
 }
 
 /*                          - - - - - - - - - - - - - Catalog.html / Пагинация - - - - - - - - - - - - -                          */

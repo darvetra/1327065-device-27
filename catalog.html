@@ -130,33 +130,19 @@
 
             <fieldset class="filter-item">
               <legend>Стоимость:</legend>
-              <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
                   <div class="toggle toggle-min">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23">
-                      <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/>
-                      <circle fill="#FFF" cx="10" cy="10" r="10"/>
-                      <circle fill="#ABABAB" cx="10" cy="10" r="2"/>
-                    </svg>
-                    <label for="min-price">от 0</label>
+                    <img src="img/filter-button.svg" alt=" " width="20" height="22">
+                    <label>от <input name="min-price" type="number" value="0"></label>
                   </div>
                   <div class="toggle toggle-max">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23">
-                      <path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/>
-                      <circle fill="#FFF" cx="10" cy="10" r="10"/>
-                      <circle fill="#ABABAB" cx="10" cy="10" r="2"/>
-                    </svg>
-                    <label for="max-price">до 5000</label>
+                    <img src="img/filter-button.svg" alt=" " width="20" height="22">
+                    <label>до <input name="max-price" type="number" value="5000"></label>
                   </div>
                 </div>
-                <div class="price-controls visually-hidden">
-                  <input name="min-price" type="number" value="0">
-                  <input name="max-price" type="number" value="15000">
-                </div>
-              </div>
             </fieldset>
 
             <fieldset>
