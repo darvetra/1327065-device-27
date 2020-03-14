@@ -311,11 +311,6 @@ a {
   opacity: 0.3;
 }
 
-.user-nav label:hover {
-  border-bottom: 2px solid #000000;
-  padding-bottom: 14px;
-}
-
 .user-nav input[type="text"] {
   width: 278px;
   height: 49px;
@@ -338,14 +333,39 @@ a {
   background-color: #000000;
   color: rgba(255, 255, 255, 1);
   display: inline-block;
+  outline: none;
 }
 
 .search-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #000000;
+  outline: none;
 }
 
-.search-label:hover .search-button {
+.search-label,
+.search-label .input-search:hover {
+  cursor: pointer;
+}
+
+.search-label .input-search::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+  
+.search-label .input-search:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-label .input-search:focus::placeholder,
+.search-label .input-search:active::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search-label .input-search:focus {
+  outline: none;
+  color: #000000;
+}
+
+.input-search:focus ~ .search-button {
   border: 0;
   border-top: 2px solid #000000;
   border-right: 2px solid #000000;
@@ -353,6 +373,17 @@ a {
   width: 85px;
   height: 49px;
   display: inline-block;
+  position: relative;
+}
+
+.input-search:focus ~ .search-button::after {
+  content: "";
+  width: 403px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 a.exit-button {
@@ -1349,6 +1380,10 @@ a.exit-button {
   position: relative;
 }
 
+.catalog-item:hover {
+  cursor: pointer;
+}
+
 .catalog-item .flag {
   /* Позиционирование */
   position: absolute;
@@ -1545,7 +1580,6 @@ a.exit-button {
   letter-spacing: 0.14px;
   text-align: left;
   color: #000000;
-
 }
 
 .filter-aside label:hover,
@@ -1556,6 +1590,10 @@ a.exit-button {
 .filter-aside label::before {
   width: 27px;   
   display: inline-block;                                             
+}
+
+.filter-aside label:active {
+  opacity: 1;
 }
 
 .filter-aside .yellow-button {
@@ -1719,6 +1757,31 @@ a.exit-button {
 
 .filter-radio:checked + label::before {
   content: url("../img/radio-on.svg");
+}
+
+/*                          - - - - - - - - - - - - - Catalog.html / Если фильтры disabled - - - - - - - - - - - - -                          */
+
+.filter-checkbox:disabled + label::before,
+.filter-radio:disabled + label::before,
+.filter-checkbox:disabled + label:hover::before,
+.filter-radio:disabled + label:hover::before,
+.filter-checkbox:disabled + label:focus::before,
+.filter-radio:disabled + label:focus::before,
+.filter-checkbox:disabled + label:active::before,
+.filter-radio:disabled + label:active::before {
+  opacity: 0.25;
+}
+
+.filter-checkbox:disabled + label,
+.filter-radio:disabled + label,
+.filter-checkbox:disabled + label:hover,
+.filter-radio:disabled + label:hover,
+.filter-checkbox:disabled + label:focus,
+.filter-radio:disabled + label:focus,
+.filter-checkbox:disabled + label:active,
+.filter-radio:disabled + label:active {
+  opacity: 0.25;
+  color: #000000;
 }
 
 /*                          - - - - - - - - - - - - - Catalog.html / Пагинация - - - - - - - - - - - - -                          */
