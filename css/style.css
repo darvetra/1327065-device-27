@@ -1,10 +1,4 @@
 /*                          - - - - - - - - - - - - - DEVICE - css/style.css - - - - - - - - - - - - -                          */
-/* Позиционирование */
-/* Блочная модель */
-/* Типографика */
-/* Оформление */
-/* Анимация */
-/* Разное */
 
 /*                          - - - - - - - - - - - - - Шрифты - - - - - - - - - - - - -                          */
  
@@ -52,7 +46,7 @@
         url("../fonts/gilroyextrabold.woff2") format("woff2");
 } 
 
-                          /* - - - - - - - - - - - - - Базовые свойства - - - - - - - - - - - - - */
+/*                          - - - - - - - - - - - - - Базовые свойства - - - - - - - - - - - - -                          */
 
 html {
   box-sizing: border-box;
@@ -98,6 +92,12 @@ a {
   overflow: hidden;
 }
 
+/* Убираем стрелки в input[type=number] */
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */ 
+}
+
 /*                          - - - - - - - - - - - - - Кнопки - - - - - - - - - - - - -                          */
 
 .yellow-button {
@@ -111,6 +111,7 @@ a {
   color: rgba(0, 0, 0, 1);
   text-transform: uppercase;
   display: inline-block;
+  vertical-align: middle;
   min-width: 160px;
   cursor: pointer;
   margin: 0 auto;
@@ -333,6 +334,7 @@ a {
   background-color: #000000;
   color: rgba(255, 255, 255, 1);
   display: inline-block;
+  vertical-align: middle;
   outline: none;
 }
 
@@ -373,6 +375,7 @@ a {
   width: 85px;
   height: 49px;
   display: inline-block;
+  vertical-align: middle;
   position: relative;
 }
 
@@ -413,6 +416,7 @@ a.exit-button {
 
 .nav-list-item {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .nav-list-item:nth-child(1) {
@@ -559,6 +563,7 @@ a.exit-button {
 .slider-controls label {
   /* Блочная модель */
   display: inline-block;
+  vertical-align: middle;
   width: 12px;
   height: 12px;
   margin-right: 16px;
@@ -896,6 +901,7 @@ a.exit-button {
   text-transform: uppercase;
   width: 160px;
   display: inline-block;
+  vertical-align: middle;
   padding: 9px 0;
   z-index: 3;
 }
@@ -922,7 +928,6 @@ a.exit-button {
 .black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) label,
 .black-button:nth-of-type(2):checked ~ ul li:nth-of-type(2) label,
 .black-button:nth-of-type(3):checked ~ ul li:nth-of-type(3) label {
-  /* background-color: #000000; */
   color: #f7e184;
 }
 
@@ -998,6 +1003,7 @@ a.exit-button {
   width: 260px; 
   height: 100px; 
   display: inline-block;
+  vertical-align: middle;
 }
 
 .partner-1 {
@@ -1227,7 +1233,6 @@ a.exit-button {
   padding: 0;
   margin: 0;
   padding-left: 73px;
-  /* padding-top: 10px; */
   width: 250px;
 }
 
@@ -1237,6 +1242,7 @@ a.exit-button {
 
 .sort-catalog li {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .sort-catalog h3{
@@ -1253,8 +1259,6 @@ a.exit-button {
 .sort-nav {
   margin: 0;
   padding: 0;
-  /* padding-right: 90px; */
-  /* padding-top: 5px; */
   margin-top: 2px;
   font-size: 0;
   width: 503px;
@@ -1430,8 +1434,6 @@ a.exit-button {
   padding: 0;
   padding-top: 180px;
 
-  /* opacity: 0.7;
-  background-color: #eeeeee; */
   background-color: rgba(238, 238, 238, 0.7);
 }
 
@@ -1516,8 +1518,6 @@ a.exit-button {
   color: #464646;
 
   float:right;
-  /* width: 100px; */
-
   margin-top: 23px;
 }
 
@@ -1589,7 +1589,8 @@ a.exit-button {
 
 .filter-aside label::before {
   width: 27px;   
-  display: inline-block;                                             
+  display: inline-block;   
+  vertical-align: middle;                                          
 }
 
 .filter-aside label:active {
@@ -1677,6 +1678,7 @@ a.exit-button {
 
   width: 55px;
   margin-left: 5px;
+
 }
 
 .toggle img {
@@ -1955,6 +1957,7 @@ a.exit-button {
 
 .footer-user-nav li{
 display: inline-block;
+vertical-align: middle;
 margin: 0 20px;
 }
 
@@ -2025,15 +2028,10 @@ margin: 0 20px;
 }
 
 .footer-nav li {
-  /* display: inline-block; */
   margin: 0;
   margin-left: 0px;
   margin-right: 35px;
 }
-
-/* .footer-nav li:nth-of-type(2) {
-  margin-right: 25px;
-} */
 
 .footer-nav li:last-of-type {
   margin-right: 0;
@@ -2076,6 +2074,7 @@ margin: 0 20px;
 
 .socials li {
   display: inline-block;
+  vertical-align: middle;
   margin: 0 12px;
 }
 
@@ -2243,12 +2242,8 @@ margin: 0 20px;
 .modal-login textarea,
 .modal input[type="text"],
 .modal input[type="email"] {
-  /* background-color: #e5e5e5; */
   background-color: #f2f2f2;
   border: 0;
-
-  /* opacity: 0.5; */
-
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -2281,8 +2276,6 @@ margin: 0 20px;
 .modal-login textarea {
   width: 760px;
   height: 156px;
-  /* opacity: 0.5; */
-
   padding-left: 20px;
   padding-top: 15px;
   margin-bottom: 50px;
@@ -2312,7 +2305,6 @@ margin: 0 20px;
   margin-left: -480px;
 
   background-color: #e5e5e5;
-  /* background-image: url("../img/map-big-jpg.jpg"); */
 }
 
 .modal-map iframe {

@@ -23,7 +23,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                 <path fill="#000000" d="M15.7 14.3l-3.104-3.104A6.979 6.979 0 0014 7a7 7 0 10-7 7 6.963 6.963 0 004.193-1.404L14.3 15.7c.185.184.38.3.7.3a1 1 0 001-1 .93.93 0 00-.3-.7zM2 7c0-2.762 2.238-5 5-5s5 2.238 5 5-2.238 5-5 5-5-2.238-5-5z"/>
               </svg>
-              <input type="text" name="search" value="Поиск по сайту" placeholder="Поиск по сайту">
+              <input type="text" name="search" value="Поиск по сайту" placeholder="Поиск по сайту" aria-label="Поиск по сайту" class="input-search">
               <button type="submit" class="search-button" name="search">Найти</button> 
             </label>
           </form>
@@ -153,23 +153,23 @@
                 <ul>
                   <li>
                     <input type="checkbox" class="filter-checkbox" name="black" id="color-black" value="" checked>
-                    <label for="color-black">Черный</label>
+                    <label for="color-black" tabindex="-1">Черный</label>
                   </li>
                   <li>
                     <input type="checkbox" class="filter-checkbox" name="white" id="color-white" value="">
-                    <label for="color-white">Белый</label>
+                    <label for="color-white" tabindex="-1">Белый</label>
                   </li>
                   <li>
                     <input type="checkbox" class="filter-checkbox" name="blue" id="color-blue" value="" checked>
-                    <label for="color-blue">Синий</label>
+                    <label for="color-blue" tabindex="-1">Синий</label>
                   </li>
                   <li>
                     <input type="checkbox" class="filter-checkbox" name="red" id="color-red" value="" checked>
-                    <label for="color-red">Красный</label>
+                    <label for="color-red" tabindex="-1">Красный</label>
                   </li>
                   <li>
                     <input type="checkbox" class="filter-checkbox" name="pink" id="color-pink" value="">
-                    <label for="color-pink">Розовый</label>
+                    <label for="color-pink" tabindex="-1">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
@@ -179,11 +179,11 @@
                 <ul>
                   <li>
                     <input type="radio" class="filter-radio" name="Bluetooth" id="radio-yes" value="yes" checked>
-                    <label for="radio-yes">Есть</label>
+                    <label for="radio-yes" tabindex="-1">Есть</label>
                   </li>
                   <li>
                     <input type="radio" class="filter-radio" name="Bluetooth" id="radio-no" value="no">
-                    <label for="radio-no">Нет</label>
+                    <label for="radio-no" tabindex="-1">Нет</label>
                   </li>
                 </ul>
               </fieldset>
