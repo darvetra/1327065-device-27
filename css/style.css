@@ -358,73 +358,73 @@
     outline: none;
   }
   
-  .search-label,
-  .search-label .input-search:hover {
+  .search-form,
+  .search-form .input-search:hover {
     cursor: pointer;
   }
   
-  .search-label .input-search::-webkit-input-placeholder {
+  .search-form .input-search::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
   
-  .search-label .input-search::-moz-placeholder {
+  .search-form .input-search::-moz-placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
   
-  .search-label .input-search:-ms-input-placeholder {
+  .search-form .input-search:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
   
-  .search-label .input-search::-ms-input-placeholder {
+  .search-form .input-search::-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
   
-  .search-label .input-search::placeholder {
+  .search-form .input-search::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
     
-  .search-label .input-search:hover::-webkit-input-placeholder {
+  .search-form .input-search:hover::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.6);
   }
     
-  .search-label .input-search:hover::-moz-placeholder {
+  .search-form .input-search:hover::-moz-placeholder {
     color: rgba(0, 0, 0, 0.6);
   }
     
-  .search-label .input-search:hover:-ms-input-placeholder {
+  .search-form .input-search:hover:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.6);
   }
     
-  .search-label .input-search:hover::-ms-input-placeholder {
+  .search-form .input-search:hover::-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.6);
   }
     
-  .search-label .input-search:hover::placeholder {
+  .search-form .input-search:hover::placeholder {
     color: rgba(0, 0, 0, 0.6);
   }
   
-  .search-label .input-search:focus::-webkit-input-placeholder, .search-label .input-search:active::-webkit-input-placeholder {
+  .search-form .input-search:focus::-webkit-input-placeholder, .search-form .input-search:active::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 1);
   }
   
-  .search-label .input-search:focus::-moz-placeholder, .search-label .input-search:active::-moz-placeholder {
+  .search-form .input-search:focus::-moz-placeholder, .search-form .input-search:active::-moz-placeholder {
     color: rgba(0, 0, 0, 1);
   }
   
-  .search-label .input-search:focus:-ms-input-placeholder, .search-label .input-search:active:-ms-input-placeholder {
+  .search-form .input-search:focus:-ms-input-placeholder, .search-form .input-search:active:-ms-input-placeholder {
     color: rgba(0, 0, 0, 1);
   }
   
-  .search-label .input-search:focus::-ms-input-placeholder, .search-label .input-search:active::-ms-input-placeholder {
+  .search-form .input-search:focus::-ms-input-placeholder, .search-form .input-search:active::-ms-input-placeholder {
     color: rgba(0, 0, 0, 1);
   }
   
-  .search-label .input-search:focus::placeholder,
-  .search-label .input-search:active::placeholder {
+  .search-form .input-search:focus::placeholder,
+  .search-form .input-search:active::placeholder {
     color: rgba(0, 0, 0, 1);
   }
   
-  .search-label .input-search:focus {
+  .search-form .input-search:focus {
     outline: none;
     color: #000000;
   }
