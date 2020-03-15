@@ -647,7 +647,7 @@
   
     /* Оформление */
     background-color: inherit;
-    background-image: url("../img/slider-button-empty.svg");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23'%3E%3Cpath d='M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z'/%3E%3C/svg%3E");
     background-size: cover;
     cursor: pointer;
   }
@@ -659,7 +659,7 @@
   #product-1:checked ~ .slider-controls label[for="product-1"],
   #product-2:checked ~ .slider-controls label[for="product-2"],
   #product-3:checked ~ .slider-controls label[for="product-3"] {
-    background-image: url("../img/slider-button.svg");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23'%3E%3Cpath d='M11.5 2c5.238 0 9.5 4.262 9.5 9.5S16.738 21 11.5 21 2 16.738 2 11.5 6.262 2 11.5 2m0-2C5.149 0 0 5.149 0 11.5 0 17.852 5.149 23 11.5 23 17.852 23 23 17.852 23 11.5 23 5.149 17.852 0 11.5 0z'/%3E%3Cpath d='M11.5 9.004a2.5 2.5 0 012.496 2.496 2.5 2.5 0 01-2.496 2.496A2.5 2.5 0 019.004 11.5 2.5 2.5 0 0111.5 9.004m0-2a4.496 4.496 0 100 8.992 4.496 4.496 0 000-8.992z'/%3E%3C/svg%3E");
   }
   
   #product-1:checked ~  #slide1,
@@ -1287,7 +1287,7 @@
     width: 17px;
     height: 29px;
   
-    background-image: url("../img/nav-arrow.svg");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7'%3E%3Cpath d='M3.83 3.132L.861.144a.5.5 0 00-.713 0 .508.508 0 000 .718l2.611 2.629L.148 6.12a.51.51 0 000 .72.5.5 0 00.713 0L3.83 3.852a.51.51 0 00.147-.36.507.507 0 00-.147-.36z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -1747,7 +1747,7 @@
     color: #000000;
   }
   
-  .filter-aside label:hover,
+  /* .filter-aside label:hover,
   .filter-aside label:focus {
     opacity: 0.6;
   }
@@ -1760,7 +1760,7 @@
   
   .filter-aside label:active {
     opacity: 1;
-  }
+  } */
   
   .filter-aside .yellow-button {
     margin: 0;
@@ -1878,8 +1878,30 @@
     margin-left: -2px;
   }
   
-  .filter-checkbox {
-    display: none;
+  .checkbox-item {
+    /* скрываем чекбоксы правильно */
+    position: absolute;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* скрываем чекбоксы в IE 11 */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .pseudo-checkbox {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+
+    /* Прогоним SVG через URL-encoder для SVG, для того чтобы вся графика загрузилась сразу: https://yoksel.github.io/url-encoder/ru/ */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
+    margin-left: -39px;
+    margin-top: 8px;
   }
   
   .filter-item-color label {
@@ -1888,22 +1910,44 @@
     padding-left: 40px;
   }
   
-  .filter-item-color label::before {
-    position: absolute;
-    top: 0;
-    margin-left: -40px;
-    margin-top: -5px;
+  /* Стилизуем чекбоксы в состоянии фокуса, во имя исполнения критерия Д26 и доступности, так как шаблоном подобное состояние не предусмотрено */
+  .checkbox-item:focus + .pseudo-checkbox {
+    outline: -webkit-focus-ring-color auto 1px;
+    outline: rgba(77, 144, 254, 255) auto 1px;
+    outline-color: -webkit-focus-ring-color;
+    outline-color: rgba(77, 144, 254, 255); /* #4d90fe */
+    outline-style: auto;
+    outline-width: 1px;
   }
   
-  .filter-checkbox + label::before {
-    content: url("../img/checkbox-off.svg");
-    margin-right: 13px;
+  .checkbox-item:checked + .pseudo-checkbox {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
+    width: 27px;
   }
   
-  .filter-checkbox:checked + label::before {
-    content: url("../img/checkbox-on.svg");
+  .filter-item-color .pseudo-checkbox:hover,
+  .checkbox-item:focus + .pseudo-checkbox {
+    opacity: 0.6;
+  }
+
+  .checkbox-item + .pseudo-checkbox:active {
+    opacity: 1;
+  }
+
+  .checkbox-item:disabled + .pseudo-checkbox,
+  .checkbox-item:disabled + .pseudo-checkbox:hover,
+  .checkbox-item:disabled + .pseudo-checkbox:focus,
+  .checkbox-item:disabled + .pseudo-checkbox:active {
+    opacity: 0.25;
   }
   
+  .checkbox-item:disabled ~ .pseudo-label,
+  .checkbox-item:disabled ~ .pseudo-label:hover,
+  .checkbox-item:disabled ~ .pseudo-label:focus,
+  .checkbox-item:disabled ~ .pseudo-label:active {
+    color: rgba(0, 0, 0, 0.25)
+  }
+
   /*                          - - - - - - - - - - - - - Catalog.html / Фильтр Bluetooth - - - - - - - - - - - - -                          */
   
   .filter-item-bluetooth ul {
@@ -1911,55 +1955,73 @@
     margin-top: 14px;
   }
   
+  .radio-item {
+    /* скрываем радио баттоны правильно */
+    position: absolute;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* скрываем радио баттоны в IE 11 */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .pseudo-radio {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+
+    /* Прогоним SVG через URL-encoder для SVG, для того чтобы вся графика загрузилась сразу: https://yoksel.github.io/url-encoder/ru/ */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E");
+    margin-left: -39px;
+    margin-top: 8px;
+  }
+
   .filter-item-bluetooth label {
     position: relative;
     padding: 0;
     padding-left: 38px;
   }
   
-  .filter-item-bluetooth label::before {
-    position: absolute;
-    top: 0;
-    margin-left: -40px;
-    margin-top: -5px;
+  /* Стилизуем радиобаттоны в состоянии фокуса, во имя исполнения критерия Д26 и доступности, так как шаблоном подобное состояние не предусмотрено */
+  .radio-item:focus + .pseudo-radio {
+    outline: -webkit-focus-ring-color auto 1px;
+    outline: rgba(77, 144, 254, 255) auto 1px;
+    outline-color: -webkit-focus-ring-color;
+    outline-color: rgba(77, 144, 254, 255); /* #4d90fe */
+    outline-style: auto;
+    outline-width: 1px;
+  }
+
+  .radio-item:checked + .pseudo-radio {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3Ccircle cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E");
   }
   
-  .filter-radio {
-    display: none;
+  .filter-item-color .pseudo-radio:hover,
+  .radio-item:focus + .pseudo-radio {
+    opacity: 0.6;
   }
-  
-  .filter-radio + label::before {
-    content: url("../img/radio-off.svg");
-    margin-right: 11px;
+
+  .radio-item + .pseudo-radio:active {
+    opacity: 1;
   }
-  
-  .filter-radio:checked + label::before {
-    content: url("../img/radio-on.svg");
-  }
-  
-  /*                          - - - - - - - - - - - - - Catalog.html / Если фильтры disabled - - - - - - - - - - - - -                          */
-  
-  .filter-checkbox:disabled + label::before,
-  .filter-radio:disabled + label::before,
-  .filter-checkbox:disabled + label:hover::before,
-  .filter-radio:disabled + label:hover::before,
-  .filter-checkbox:disabled + label:focus::before,
-  .filter-radio:disabled + label:focus::before,
-  .filter-checkbox:disabled + label:active::before,
-  .filter-radio:disabled + label:active::before {
+
+  .radio-item:disabled + .pseudo-radio,
+  .radio-item:disabled + .pseudo-radio:hover,
+  .radio-item:disabled + .pseudo-radio:focus,
+  .radio-item:disabled + .pseudo-radio:active {
     opacity: 0.25;
   }
   
-  .filter-checkbox:disabled + label,
-  .filter-radio:disabled + label,
-  .filter-checkbox:disabled + label:hover,
-  .filter-radio:disabled + label:hover,
-  .filter-checkbox:disabled + label:focus,
-  .filter-radio:disabled + label:focus,
-  .filter-checkbox:disabled + label:active,
-  .filter-radio:disabled + label:active {
-    opacity: 0.25;
-    color: #000000;
+  .radio-item:disabled ~ .pseudo-label,
+  .radio-item:disabled ~ .pseudo-label:hover,
+  .radio-item:disabled ~ .pseudo-label:focus,
+  .radio-item:disabled ~ .pseudo-label:active {
+    color: rgba(0, 0, 0, 0.25)
   }
   
   /*                          - - - - - - - - - - - - - Catalog.html / Пагинация - - - - - - - - - - - - -                          */

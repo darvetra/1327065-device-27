@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/minify-prefixed-style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <title>HTML Academy: Девайс</title>
   </head>
@@ -29,7 +29,7 @@
           </form>
         </li>
         <li class="user-nav-login">
-          <a href="#" class="user-nav-link">
+          <a href="profile.html" class="user-nav-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12">
               <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 001.687-2.972 3.485 3.485 0 00-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
             </svg>
@@ -152,24 +152,39 @@
                 <legend>Цвет</legend>
                 <ul>
                   <li>
-                    <input type="checkbox" class="filter-checkbox" name="black" id="color-black" value="" checked>
-                    <label for="color-black" tabindex="-1">Черный</label>
+                    <label>
+                      <input type="checkbox" class="checkbox-item" name="black" id="color-black" value="" checked>
+                      <span class="pseudo-checkbox"></span>
+                      <span class="pseudo-label">Черный</span> 
+                    </label>
                   </li>
                   <li>
-                    <input type="checkbox" class="filter-checkbox" name="white" id="color-white" value="">
-                    <label for="color-white" tabindex="-1">Белый</label>
+                    <label>
+                      <input type="checkbox" class="checkbox-item" name="white" id="color-white" value="" >
+                      <span class="pseudo-checkbox"></span>
+                      <span class="pseudo-label">Белый</span> 
+                    </label>
                   </li>
                   <li>
-                    <input type="checkbox" class="filter-checkbox" name="blue" id="color-blue" value="" checked>
-                    <label for="color-blue" tabindex="-1">Синий</label>
+                    <label>
+                      <input type="checkbox" class="checkbox-item" name="blue" id="color-blue" value="" checked>
+                      <span class="pseudo-checkbox"></span>
+                      <span class="pseudo-label">Синий</span> 
+                    </label>
                   </li>
                   <li>
-                    <input type="checkbox" class="filter-checkbox" name="red" id="color-red" value="" checked>
-                    <label for="color-red" tabindex="-1">Красный</label>
+                    <label>
+                      <input type="checkbox" class="checkbox-item" name="red" id="color-red" value="" checked>
+                      <span class="pseudo-checkbox"></span>
+                      <span class="pseudo-label">Красный</span> 
+                    </label>
                   </li>
                   <li>
-                    <input type="checkbox" class="filter-checkbox" name="pink" id="color-pink" value="">
-                    <label for="color-pink" tabindex="-1">Розовый</label>
+                    <label>
+                      <input type="checkbox" class="checkbox-item" name="pink" id="color-pink" value="">
+                      <span class="pseudo-checkbox"></span>
+                      <span class="pseudo-label">Розовый</span> 
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -178,12 +193,18 @@
                 <legend>Bluetooth</legend>
                 <ul>
                   <li>
-                    <input type="radio" class="filter-radio" name="Bluetooth" id="radio-yes" value="yes" checked>
-                    <label for="radio-yes" tabindex="-1">Есть</label>
+                    <label>
+                      <input type="radio" class="radio-item" name="Bluetooth" id="radio-yes" value="yes" checked>
+                      <span class="pseudo-radio"></span>
+                      <span class="pseudo-label">Есть</span>
+                    </label>
                   </li>
                   <li>
-                    <input type="radio" class="filter-radio" name="Bluetooth" id="radio-no" value="no">
-                    <label for="radio-no" tabindex="-1">Нет</label>
+                    <label>
+                      <input type="radio" class="radio-item" name="Bluetooth" id="radio-no" value="no">
+                      <span class="pseudo-radio"></span>
+                      <span class="pseudo-label">Нет</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -275,7 +296,7 @@
 
         <ul class="footer-user-nav">
           <li>
-            <a href="#" class="user-nav-link">
+            <a href="profile.html" class="user-nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12">
                 <path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 001.687-2.972 3.485 3.485 0 00-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
               </svg>
