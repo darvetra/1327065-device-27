@@ -866,6 +866,16 @@ a.exit-button {
   width: 510px;
 }
 
+.slider-item:nth-of-type(2) h2 {
+  width: 410px;
+}
+
+.slider-item:nth-of-type(3) h2 {
+  width: 310px;
+}
+
+
+
 .slider-info p {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
@@ -1049,8 +1059,21 @@ a.exit-button {
   position: relative;
 }
 
-.advantages-list input {
-  display: none;
+.advantages-inputs input {
+
+  /* скрываем инпуты правильно */
+  position: absolute;
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* скрываем инпуты в IE 11 */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
 }
 
 .advantages-list ul {
@@ -1087,16 +1110,16 @@ a.exit-button {
   width: 440px;
 }
 
-.black-button ~ ul li {
+.advantages-list ul li {
   width: 278px;
   margin: 21px 0;
 }
 
-.black-button ~ ul li:last-child {
+.advantages-list ul li:last-child {
   margin-top: 24px;
 }
 
-.black-button ~ ul label {
+.black-button + label {
   font-family: Gilroy, Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -1110,9 +1133,11 @@ a.exit-button {
   vertical-align: middle;
   padding: 9px 0;
   z-index: 3;
+
+  /* position: relative; */
 }
                                                                           
-.advantages-list label::after {
+.black-button + label::after {
   width: 160px;
   content: " ";
   height: 8px;
@@ -1126,30 +1151,75 @@ a.exit-button {
   margin-top: -4px;
 }
 
-.advantages-list label:hover::after {
+.black-button + label:hover::after {
   height: 40px;
   top: 5px;
 }
 
-.black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) label,
+/* .black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) label,
 .black-button:nth-of-type(2):checked ~ ul li:nth-of-type(2) label,
-.black-button:nth-of-type(3):checked ~ ul li:nth-of-type(3) label {
+.black-button:nth-of-type(3):checked ~ ul li:nth-of-type(3) label */
+
+.advantages-inputs li:nth-of-type(1) .black-button:checked + label,
+.advantages-inputs li:nth-of-type(2) .black-button:checked + label,
+.advantages-inputs li:nth-of-type(3) .black-button:checked + label {
   color: #f7e184;
+  background-color: #000000;
+  /* width: 278px; */
 }
 
-.black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) ,
+
+
+/* .black-button:nth-of-type(1):checked ~ ul li:nth-of-type(1) ,
 .black-button:nth-of-type(2):checked ~ ul li:nth-of-type(2) ,
 .black-button:nth-of-type(3):checked ~ ul li:nth-of-type(3)  {
   background-color: #000000;
   color: #f7e184;
+} */
+
+.advantages-inputs li:nth-of-type(1) .black-button:checked + label,
+.advantages-inputs li:nth-of-type(2) .black-button:checked + label,
+.advantages-inputs li:nth-of-type(3) .black-button:checked + label {
+  background-color: #000000;
+}
+
+.advantages-inputs li:nth-of-type(1) .black-button:checked + label::before,
+.advantages-inputs li:nth-of-type(2) .black-button:checked + label::before,
+.advantages-inputs li:nth-of-type(3) .black-button:checked + label::before {
+  background-color: #000000;
+  content: "";
+  display: block;
+  width: 118px;
+  height: 41px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Стилизуем табы в состоянии фокуса, во имя исполнения критерия Д26 и доступности */
+.advantages-inputs input:focus + label {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline: rgba(77, 144, 254, 255) auto 1px;
+  outline-color: -webkit-focus-ring-color;
+  outline-color: rgba(77, 144, 254, 255); /* #4d90fe */
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.advantages-inputs li {
+  position: relative;
 }
 
 .advantage-item {
   width: 875px;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
   padding-left: 123px;
   margin: 0;
   margin-top: -27px;
+
+  top: 20px;
+  left: 278px;
 
 }
 
@@ -1215,16 +1285,21 @@ a.exit-button {
   display: none; 
 }
 
-.black-button:nth-of-type(1):checked ~ .advantage-item:nth-of-type(1){
+/* .black-button:nth-of-type(1):checked ~ .advantage-item:nth-of-type(1) */
+.advantages-inputs li:nth-of-type(1) .black-button:checked ~ .advantage-item {
   display: block;
 }
 
-.black-button:nth-of-type(2):checked ~ .advantage-item:nth-of-type(2){
+/* .black-button:nth-of-type(2):checked ~ .advantage-item:nth-of-type(2) */
+.advantages-inputs li:nth-of-type(2) .black-button:checked ~ .advantage-item {
   display: block;
+  margin-top: -90px;
 }
 
-.black-button:nth-of-type(3):checked ~ .advantage-item:nth-of-type(3){
+/* .black-button:nth-of-type(3):checked ~ .advantage-item:nth-of-type(3) */
+.advantages-inputs li:nth-of-type(3) .black-button:checked ~ .advantage-item {
   display: block;
+  margin-top: -155px;
 }
 
 /*                          - - - - - - - - - - - - - Index.html / Блок с партнерами - - - - - - - - - - - - -                          */
