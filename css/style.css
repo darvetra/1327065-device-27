@@ -952,7 +952,7 @@ a.exit-button {
   margin: 0 auto;
   margin-top: 95px;
   padding: 0;
-
+  flex-wrap: wrap;
   /* Оформление */
   list-style-type: none;
 }
@@ -1906,6 +1906,9 @@ a.exit-button {
   margin-right: 88px;
 }
 
+.pseudo-label {
+  cursor: pointer;
+}
 /*                          - - - - - - - - - - - - - Catalog.html / Сложный фильтр с двойным range - - - - - - - - - - - - -                          */
 
 .filter-item {
@@ -2035,6 +2038,7 @@ a.exit-button {
   position: absolute;
   width: 23px;
   height: 23px;
+  cursor: pointer;
 
   /* Прогоним SVG через URL-encoder для SVG, для того чтобы вся графика загрузилась сразу: https://yoksel.github.io/url-encoder/ru/ */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
@@ -2083,7 +2087,7 @@ a.exit-button {
 .checkbox-item:disabled ~ .pseudo-label:hover,
 .checkbox-item:disabled ~ .pseudo-label:focus,
 .checkbox-item:disabled ~ .pseudo-label:active {
-  color: rgba(0, 0, 0, 0.25)
+  color: rgba(0, 0, 0, 0.25);
 }
 
 /*                          - - - - - - - - - - - - - Catalog.html / Фильтр Bluetooth - - - - - - - - - - - - -                          */
@@ -2112,6 +2116,7 @@ a.exit-button {
   position: absolute;
   width: 25px;
   height: 25px;
+  cursor: pointer;
 
   /* Прогоним SVG через URL-encoder для SVG, для того чтобы вся графика загрузилась сразу: https://yoksel.github.io/url-encoder/ru/ */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E");
@@ -2159,7 +2164,7 @@ a.exit-button {
 .radio-item:disabled ~ .pseudo-label:hover,
 .radio-item:disabled ~ .pseudo-label:focus,
 .radio-item:disabled ~ .pseudo-label:active {
-  color: rgba(0, 0, 0, 0.25)
+  color: rgba(0, 0, 0, 0.25);
 }
 
 /*                          - - - - - - - - - - - - - Catalog.html / Пагинация - - - - - - - - - - - - -                          */
