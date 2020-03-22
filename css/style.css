@@ -704,7 +704,7 @@ a.exit-button {
   /* Позиционирование */
   position: absolute;
   right: 69px;
-  top: 320px;
+  bottom: 152px;
   z-index: 20;
 }
 
@@ -750,7 +750,7 @@ a.exit-button {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 1160px;
-  height: 500px;
+  min-height: 500px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
